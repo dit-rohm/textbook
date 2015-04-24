@@ -1,10 +1,11 @@
 ## HTMLを書いてみよう
 [同志社大学のWebページ](http://www.doshisha.ac.jp/index.html)を表示してみよう。
 ブラウザで右クリックをして [ページのソースを表示] を押そう。
-ここで表示されるテキストがHTML（Hypertext Markup Language）と呼ばれるWebの表示に用いられるものだよ。
+ここで表示されるテキストがHTML（Hypertext Markup Language）と呼ばれるWeb表示に用いられるものだよ。
 
 Sublime Text2を開いてCommand+Nを押そう（Windowsの場合はControl+Nだよ）。
-新しいファイルが開いたら以下のHTMLを写してみよう。
+新しいファイルが開いたらCommand+Sを押してファイル名をindex.htmlと書いてデスクトップに保存しよう。
+次に以下のHTMLを写してみよう。
 
 ###index.html
 ```html
@@ -21,8 +22,6 @@ Sublime Text2を開いてCommand+Nを押そう（Windowsの場合はControl+Nだ
 </body>
 </html>
 ```
-
-書き写したらCommand+Sを押してファイル名をindex.htmlと書いてデスクトップに保存しよう。
 
 ## 書いたHTMLをブラウザで見てみよう
 保存したindex.htmlを開くと書いたHTMLをブラウザで確認できるよ。
@@ -43,33 +42,34 @@ bodyで指定したものがページの中身になっているよ。
 
 ## HTMLをCSSで装飾してみよう
 さっきの殺風景なHTMLに装飾を加えるのがCSS（Cascading Style Sheets）だよ。CSSで文字の色や背景を変えてみよう！
+
 Sublime Text2を開いてCommand+Nを押そう（Windowsの場合はControl+Nだよ）。
-新しいファイルが開いたら以下のCSSを書き写してみよう。
+ファイルが開いたらstyle.cssと書いてデスクトップに保存しよう。
+次に以下のCSSを書き写してみよう。
 
 ###style.css
 ```css
 h1 {
-  background-color: #efefef;
-  color: #000000;
+  color: red;
+  background-color: gray;
 }
 
 h2 {
-  color: #ff0000;
+  color: blue;
 }
 
 h3 {
-  color: #008000;
+  color: green;
 }
 ```
 
-書いたらstyle.cssと書いてデスクトップに保存しよう。
-次にさっき作成したindex.htmlに以下の1行を追記してstyle.cssを読み込もう。
+さっき作成したindex.htmlに以下の1行を追記してstyle.cssを読み込もう。
 
 ###index.html
 ```html
 ---（中略）---
-<title>Document</title>
-<link rel="stylesheet" href="style.css">
+  <title>ここがタイトルだよ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 ---（中略）---
 ```
@@ -77,7 +77,7 @@ h3 {
 ## 書いたHTMLとCSSをブラウザで見てみよう
 ちゃんと装飾されて表示されたかな？
 
-![result.png](images/result.png)
+![screenshot.png](images/screenshot.png)
 
 ## 発展課題
 htmlのbodyに以下のコードを書き写してブラウザで確認してみよう。
@@ -98,21 +98,25 @@ cssに以下のコードを書き写してブラウザで確認してみよう�
 ```css
 ---（中略）---
 h1 {
-  background-color: #efefef;
-  color: #000000;
+  color: red;
+  background-color: gray;
   font-size: 30px;
-  background: #008000;
-  border: 1px solid #ff0000;
+  border: 3px solid red;
   padding: 16px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: 1s;
 }
 
 h1:hover {
-  background: #ff0000;
+  background-color: white;
 }
 ---（中略）---
 ```
 
 一行ずつ書き写しながらブラウザで動作を確認しよう！
 自分で調べるときは「html タグ」や「css プロパティ」で検索するのがオススメだよ！
+
+## 理解度チェック問題
+以下の画像のように表示させてみよう！
+
+![quiz.png](images/quiz.png)
