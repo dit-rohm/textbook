@@ -53,7 +53,7 @@ webサイトのタイトルを設定します。タイトルを書くと、ブ�
 
 以下のように表示されます。
 
-![titleの例](./title.png)
+![titleの例](images/title.png)
 
 ### `<meta charset="utf-8">`
 
@@ -104,7 +104,7 @@ divisionの略で、分割された区分
 
 以下のように表示されます。
 
-![titleの例](./hx.png)
+![titleの例](images/hx.png)
 
 ### `<img src="...">`
 
@@ -127,7 +127,7 @@ divisionの略で、分割された区分
 
 以下のように表示されます。
 
-![titleの例](./list.png)
+![titleの例](images/list.png)
 
 ### `<!-- ... -->`
 
