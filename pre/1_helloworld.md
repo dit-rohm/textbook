@@ -120,3 +120,5 @@ h1:hover {
 以下の画像のように表示させてみよう！
 
 ![quiz.png](images/quiz.png)
+
+[次へ](2_profile.md)
