@@ -77,7 +77,7 @@ h3 {
 ## 書いたHTMLとCSSをブラウザで見てみよう
 ちゃんと装飾されて表示されたかな？
 
-![screenshot.png](images/screenshot.png)
+![screenshot.png](images/helloworld/screenshot.png)
 
 ## 発展課題
 htmlのbodyに以下のコードを書き写してブラウザで確認してみよう。
@@ -119,6 +119,6 @@ h1:hover {
 ## 理解度チェック問題
 以下の画像のように表示させてみよう！
 
-![quiz.png](images/quiz.png)
+![quiz.png](images/helloworld/quiz.png)
 
-[次へ](2_profile.md)
+[次へ](profile.md)

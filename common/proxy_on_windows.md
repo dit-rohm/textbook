@@ -12,7 +12,7 @@
 
 > ポート： 8080
 
-![プロキシ設定1](images/win1.png)
+![プロキシ設定1](images/proxy_on_windows/win1.png)
 
 「詳細設定」をクリックします。
 
@@ -30,7 +30,7 @@
 
 > ポート： 8080
 
-![プロキシ設定2](images/win2.png)
+![プロキシ設定2](images/proxy_on_windows/win2.png)
 
 
 「すべてのプロトコルでこのプロキシを使用する」にチェックをしてください。
