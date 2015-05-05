@@ -10,6 +10,7 @@ DITが開催する勉強会の教材です。
 1. [デベロッパーツール](common/dev_tool.md)
 1. [ショートカットキー（Mac編）](common/shortcutkey_mac.md)
 1. [ショートカットキー（Windows編）](common/shortcutkey_win.md)
+1. [slackの使い方](common/how_to_use_slack.md)
 
 ## プレ勉強会 (2015/04/25)
 分からないときはリファレンスを参照しましょう。
