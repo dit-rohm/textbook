@@ -8,35 +8,35 @@
 ##どこでも使えるショートカットキー
 まずはどのアプリでも使えるショートカットキーから学んでいきましょう。
 
-* Ctrl + C コピー
-* Ctrl + V ペースト
-* Ctrl + X 切り取り
-* Ctrl + Z 元に戻す
-* Ctrl + Y やり直す
-* Ctrl + A 全選択
-* Ctrl + S 保存
-* Ctrl + → 行の最後に行く
-* Ctrl + ← 行の最初に行く
-* Ctrl + ↑ ページの最初に行く
-* Ctrl + ↓ ページの最後に行く
-* Shift + 矢印 選択する
-* Ctrl + F 検索する
-* Ctrl + P 印刷する
+* Ctrl + C : コピー
+* Ctrl + V : ペースト
+* Ctrl + X : 切り取り
+* Ctrl + Z : 元に戻す
+* Ctrl + Y : やり直す
+* Ctrl + A : 全選択
+* Ctrl + S : 保存
+* Ctrl + → : 行の最後に行く
+* Ctrl + ← : 行の最初に行く
+* Ctrl + ↑ : ページの最初に行く
+* Ctrl + ↓ : ページの最後に行く
+* Shift + 矢印 : 選択する
+* Ctrl + F : 検索する
+* Ctrl + P : 印刷する
 
 
 ##Chromeで使えるショートカットキー
 次はChromeブラウザで使えるショートカットキーです。
 
-* Ctrl + T 新しいタブを開く
-* Ctrl + N 新しいウインドウを開く
-* Ctrl + W 現在のタブを閉じる
-* Ctrl + tab タブを移動する
-* Ctrl + → 進む
-* Ctrl + ← 戻る
+* Ctrl + T : 新しいタブを開く
+* Ctrl + N : 新しいウインドウを開く
+* Ctrl + W : 現在のタブを閉じる
+* Ctrl + tab : タブを移動する
+* Ctrl + → : 進む
+* Ctrl + ← : 戻る
 
 ##Windowsで使えるショートカットキー
 次はWindowsで使えるショートカットキーです。
 
-* Windows + tab アプリ間を移動する
-* Windows + 矢印 ウィンドウの最大化、最小化
+* Windows + tab : アプリ間を移動する
+* Windows + 矢印 : ウィンドウの最大化、最小化
 

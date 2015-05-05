@@ -8,37 +8,37 @@
 ##どこでも使えるショートカットキー
 まずはどのアプリでも使えるショートカットキーから学んでいきましょう。
 
-* Command + C コピー
-* Command + V ペースト
-* Command + X 切り取り
-* Command + Z 前に戻る
-* Command + Y 次に進む
-* Command + A 全選択
-* Command + S 保存
-* Command + → 行の最後に行く
-* Command + ← 行の最初に行く
-* Command + ↑ ページの最初に行く
-* Command + ↓ ページの最後に行く
-* Shift + 矢印 選択する
-* Command + F 検索する
-* Command + P 印刷する
-* Option + ↑/↓ 行を移動する
-* Option + →/← 単語ごとに移動する
+* Command + C : コピー
+* Command + V : ペースト
+* Command + X : 切り取り
+* Command + Z : 前に戻る
+* Command + Y : 次に進む
+* Command + A : 全選択
+* Command + S : 保存
+* Command + → : 行の最後に行く
+* Command + ← : 行の最初に行く
+* Command + ↑ : ページの最初に行く
+* Command + ↓ : ページの最後に行く
+* Shift + 矢印 : 選択する
+* Command + F : 検索する
+* Command + P : 印刷する
+* Option + ↑/↓ : 行を移動する
+* Option + →/← : 単語ごとに移動する
 
 ##Chromeで使えるショートカットキー
 次はChromeブラウザで使えるショートカットキーです。
 
-* Command + T 新しいタブを開く
-* Command + N 新しいウインドウを開く
-* Command + W 現在のタブを閉じる
-* Control + tab タブを移動する
-* Command + → 進む
-* Command + ← 戻る
+* Command + T : 新しいタブを開く
+* Command + N : 新しいウインドウを開く
+* Command + W : 現在のタブを閉じる
+* Control + tab : タブを移動する
+* Command + → : 進む
+* Command + ← : 戻る
 
 ##Macで使えるショートカットキー
 次はMacで使えるショートカットキーです。
 
-* Control + Space Spotlight検索をする
-* Command + tab アプリ間を移動する
+* Control + Space : Spotlight検索をする
+* Command + tab : アプリ間を移動する
 
 
