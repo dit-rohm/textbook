@@ -7,6 +7,7 @@ DITが開催する勉強会の教材です。
 1. [Sublime Textを導入しよう](common/sublime.md)
 1. [HTMLリファレンス](common/html_reference.md)
 1. [CSSリファレンス](common/css_reference.md)
+1. [デベロッパーツール](common/dev_tool.md)
 
 ## プレ勉強会 (2015/04/25)
 分からないときはリファレンスを参照しましょう。
