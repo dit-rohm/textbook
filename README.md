@@ -11,8 +11,8 @@ DITが開催する勉強会の教材です。
 1. [ショートカットキー（Mac編）](common/shortcutkey_mac.md)
 1. [ショートカットキー（Windows編）](common/shortcutkey_win.md)
 
-## プレ勉強会 (2015/04/25)
+## 第1回勉強会 (2015/04/25, 2015/04/28)
 分からないときはリファレンスを参照しましょう。
 
-1. [HTMLを書いてみよう](pre/helloworld.md)
-1. [プロフィールを作ろう](pre/profile.md)
+1. [HTMLを書いてみよう](1/helloworld.md)
+1. [プロフィールを作ろう](1/profile.md)
