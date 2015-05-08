@@ -7,7 +7,7 @@ CSS（Cascading Style Sheets）は、HTMLで書かれた文章を装飾（色、
 
 ```
 セレクター {
-	プロパティ名: 値;
+  プロパティ名: 値;
 }
 ```
 
@@ -45,16 +45,30 @@ p { ... }
 
 ```css
 #main p {
-	color: red;
-} 
+  color: red;
+}
 ```
 ```html
 <div id="main">
-	<p>ここの文字が赤色に</p>
+  <p>ここの文字が赤色に</p>
 </div>
 <p>ここには適応されない</p>
 ```
 
+### :hover
+
+ある要素にホバー（マウスを乗せる）した際に適応します。
+
+```css
+a {
+  color: blue;
+}
+
+a:hover {
+  /* aタグにホバーした際に色を赤に */
+  color: red;
+}
+```
 
 ## プロパティ
 
@@ -77,6 +91,7 @@ height: 100px;
 ### margin
 
 ある要素の外側の余白を指定します。複数の書き方があります。
+paddingとの違いは、<a href="http://klutche.org/archives/443/" target="_blank">marginとpaddingの違い</a>を参照してください。
 
 ```css
 margin: 10px; /* 上下左右に10pxの余白を取る */
@@ -90,9 +105,10 @@ margin-left: 10px;   /* 左に10pxの余白を取る */
 margin: 10px 20px 30px 40px; 
 ```
 
-### padding	
+### padding
 
 ある要素の内側の余白を指定します。marginと同様に複数の書き方があります。
+marginとの違いは、<a href="http://klutche.org/archives/443/" target="_blank">marginとpaddingの違い</a>を参照してください。
 
 ```css
 padding: 10px; /* 上下左右に10pxの余白 */
@@ -145,8 +161,6 @@ font-size: 15px;
 
 ここでは、よく使うプロパティを列挙しましたが、これ以外のプロパティについて知りたい場合、プロパティ名で検索しましょう。
 
-
-
 ## CSSを書く場所
 
 CSSを記述する方法は2つあります。
@@ -160,16 +174,16 @@ CSSを記述する方法は2つあります。
 
 ```html
 <html>
-	<head>
-		<style>
-			#main {
-				background: black;
-			}
-			h1 {
-				color: red;
-			}
-		</style>
-	</head>
+  <head>
+    <style>
+      #main {
+        background: black;
+      }
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
 </html>
 ```
 
@@ -177,9 +191,9 @@ CSSを記述する方法は2つあります。
 
 ```html
 <html>
-	<head>
-		<link rel="stylesheet" href="css/style.css">
-	</head>
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 </html>
 ```
 
