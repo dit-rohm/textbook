@@ -119,9 +119,9 @@ divisionの略で、分割された区分
 
 ```html
 <ul>
-	<li>first item</li>
-	<li>second item</li>
-	<li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ul>
 ```
 
