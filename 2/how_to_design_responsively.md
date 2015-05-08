@@ -93,7 +93,7 @@ HTMLのにmeta要素として記述します。
 
 
 ### 参考資料
-* [レスポンシブWebデザインはviewportとメディアクエリーからはじめろ！](http://barktoimagine.com/web/846)
+* [レスポンシブWebデザインはviewportとメディアクエリーからはじめろ！](https://web.archive.org/web/20140725140332/http://barktoimagine.com/web/846)
 * [CSS3 Media Queries を使って、Webサイトをスマートフォンに対応させるときの注意書き](http://webdesignrecipes.com/web-design-for-mobile-with-css3-media-queries)
 * [レスポンシブWebデザインの作り方（簡単設定方法）](http://webdesignerwork.jp/web/responsivewebdesign/)
 
