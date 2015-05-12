@@ -1,4 +1,4 @@
-# Doshisha Institute of Technology
+# DIT
 DITが開催する勉強会の教材です。
 
 ## 参考資料
@@ -18,3 +18,6 @@ DITが開催する勉強会の教材です。
 
 ## 第2回勉強会 (2015/05/09, 2015/05/13)
 1. [レスポンシブデザインの作り方](2/how_to_design_responsively.md)
+
+# License
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />この 作品 は <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">クリエイティブ・コモンズ 表示 - 非営利 4.0 国際 ライセンスの下に提供されています。</a>
