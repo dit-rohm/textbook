@@ -72,6 +72,23 @@ a:hover {
 
 ## プロパティ
 
+### float
+
+<a href="http://www.htmq.com/htmlkihon/005.shtml" target="_blank">ブロック要素</a>（div, p等）に対して、
+左右への回り込みを許可します。
+
+```css
+float: left;
+```
+
+### clear
+
+`float`を解除します。floatを指定した要素の直後のタグで指定します。
+
+```css
+clear: both;
+```
+
 ### width
 
 ある要素の横幅を指定します。
@@ -94,14 +111,15 @@ height: 100px;
 paddingとの違いは、<a href="http://klutche.org/archives/443/" target="_blank">marginとpaddingの違い</a>を参照してください。
 
 ```css
-margin: 10px; /* 上下左右に10pxの余白を取る */
+/* 上下左右に10px */
+margin: 10px;
 
-margin-top: 10px;    /* 上に10pxの余白を取る */
-margin-right: 10px;  /* 右に10pxの余白を取る */
-margin-bottom: 10px; /* 下に10pxの余白を取る */
-margin-left: 10px;   /* 左に10pxの余白を取る */
+margin-top: 10px;
+margin-right: 10px;
+margin-bottom: 10px;
+margin-left: 10px;
 
-/* 上に10px、右に20px、下に30px、左に40pxの余白を取る */
+/* 上右下左の順番で指定 */
 margin: 10px 20px 30px 40px; 
 ```
 
@@ -111,14 +129,15 @@ margin: 10px 20px 30px 40px;
 marginとの違いは、<a href="http://klutche.org/archives/443/" target="_blank">marginとpaddingの違い</a>を参照してください。
 
 ```css
-padding: 10px; /* 上下左右に10pxの余白 */
+/* 上下左右に10px */
+padding: 10px;
 
 padding-top: 10px;
 padding-right: 10px;
 padding-bottom: 10px;
 padding-left: 10px;
 
-/* 上に10px、右に20px、下に30px、左に40pxの余白を取る */
+/* 上右下左の順番で指定 */
 padding: 10px 20px 30px 40px; 
 ```
 
@@ -158,8 +177,75 @@ background: #ff0000; /* 背景色を赤にする */
 font-size: 15px;
 ```
 
-
 ここでは、よく使うプロパティを列挙しましたが、これ以外のプロパティについて知りたい場合、プロパティ名で検索しましょう。
+
+## marginとpaddingの違い
+
+ある要素の外側の余白がmargin、内側の余白がpaddingです。違いが現れるのはborderやbackgroundをしたときです。以下に例を示します。
+
+
+```html
+<div>ここに文章が入ります。</div>
+```
+
+```css
+div {
+  border: 1px solid #888;
+  background: #eee;
+}
+```
+
+これを適応するとこうなります。
+
+![default](images/css_reference/default.png)
+
+それでは`margin`を適応してみましょう。
+
+```css
+div {
+  margin: 30px;
+  border: 1px solid #888;
+  background: #eee;
+}
+```
+
+すると、箱の周りに余白ができますね。
+
+![margin](images/css_reference/margin.png)
+
+次に`padding`を指定してみます。
+
+```css
+div {
+  padding: 30px;
+  border: 1px solid #888;
+  background: #eee;
+}
+```
+
+![padding](images/css_reference/padding.png)
+
+今度は、箱の内側に余白ができ、背景色もついていますね。
+このようにmarginとpaddingの違いは、borderやbackgroundを指定した際に顕著です。
+この違いを理解しておくと、レイアウトを組む際に非常に役立ちます。
+
+## カラーコード
+
+色の指定には色の名前（black, red, purple）のほか、[カラーコード](http://www.netyasun.com/home/color.html)（#000, #ff0000, #800080など）が使えます。
+
+前者はひと目で何色かわかりますが、細かい色の指定ができません。そこで、多くのwebサイトでは後者のカラーコードを用いて色の指定をしています。このカラーコードの意味を少しだけ解説します。
+
+カラーコードは以下のように記述します。
+
+```css
+#000000 /* 黒 */
+#f39800 /* オレンジ*/
+#f6adc6 /* 撫子色(ピンク) */
+```
+
+シャープ（#）に続けて、6桁の[16進数](http://www.sophia-it.com/content/)で表記されます。6桁の数字は、2つずつ区切りった際に、前からRed、Green、Blueの色の濃さを表しています。すなわち、上記のオレンジを例にすると、f3が赤色の濃さ、98が緑色の濃さ、00が青色の濃さを示しています。16進数の細かい説明は省きますが、ffが最大、00が最小です。このRGB(Red, Green, Blue)の組み合わせで細かな色を表現します。
+
+最初は難しいと思うので、[色見本](http://www.color-sample.com/)を活用しましょう。こういう面白いサイトもあります: [colourco.de](http://colourco.de/)
 
 ## CSSを書く場所
 
@@ -199,23 +285,5 @@ CSSを記述する方法は2つあります。
 
 `css/style.css`は、cssフォルダの中にあるstyle.cssを指定しています。
 
-
-## カラーコード
-
-色の指定には色の名前（black, red, purple）のほか、[カラーコード](http://www.netyasun.com/home/color.html)（#000, #ff0000, #800080など）が使えます。
-
-前者はひと目で何色かわかりますが、細かい色の指定ができません。そこで、多くのwebサイトでは後者のカラーコードを用いて色の指定をしています。このカラーコードの意味を少しだけ解説します。
-
-カラーコードは以下のように記述します。
-
-```css
-#000000 /* 黒 */
-#f39800 /* オレンジ*/
-#f6adc6 /* 撫子色(ピンク) */
-```
-
-シャープ（#）に続けて、6桁の[16進数](http://www.sophia-it.com/content/)で表記されます。6桁の数字は、2つずつ区切りった際に、前からRed、Green、Blueの色の濃さを表しています。すなわち、上記のオレンジを例にすると、f3が赤色の濃さ、98が緑色の濃さ、00が青色の濃さを示しています。16進数の細かい説明は省きますが、ffが最大、00が最小です。このRGB(Red, Green, Blue)の組み合わせで細かな色を表現します。
-
-最初は難しいと思うので、[色見本](http://www.color-sample.com/)を活用しましょう。
 
 
