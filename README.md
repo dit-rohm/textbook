@@ -12,6 +12,10 @@ DITが開催する勉強会の教材です。
 ## 第2回勉強会
 1. [レスポンシブデザインの作り方](2/how_to_design_responsively.md)
 
+
+## 第3回勉強会
+1. [ブログ風のレイアウト](3/basic_bloglike_layout.md)
+
 ## その他
 1. [プロキシ設定（Mac編）](common/proxy_on_mac.md)
 1. [プロキシ設定（Windows編）](common/proxy_on_windows.md)
