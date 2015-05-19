@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf8">
+  <meta charset="utf-8">
   <title>タイトル</title>
 </head>
 <body>
