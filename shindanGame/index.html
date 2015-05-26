@@ -2,10 +2,8 @@
 <html>
 <head>
   <meta charaset="utf-8">
-  <meta content="text/javascript">
   <title>4タイプ診断 - DIT JS入門</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
@@ -25,10 +23,10 @@
             <p>質問1.</p>
             <p>グループディスカッションにおけるあなたの役割は？</p>
             <ul>
-              <li><input type="radio" name="q0" value="officer">リーダー</li>
-              <li><input type="radio" name="q0" value="scholar">アイデアマン</li>
-              <li><input type="radio" name="q0" value="king">ムードメーカ</li>
-              <li><input type="radio" name="q0" value="craftsman">監視役</li>
+              <li><input type="radio" name="q0" value="officer" required>リーダー</li>
+              <li><input type="radio" name="q0" value="scholar" required>アイデアマン</li>
+              <li><input type="radio" name="q0" value="king" required>ムードメーカ</li>
+              <li><input type="radio" name="q0" value="craftsman" required>監視役</li>
             </ul>
           </div>
 
@@ -36,10 +34,10 @@
             <p>質問2.</p>
             <p>後輩との関係で大事にすることは？</p>
             <ul>
-              <li><input type="radio" name="q1" value="officer">しっかりとした上下関係</li>
-              <li><input type="radio" name="q1" value="king">後輩から慕われること</li>
-              <li><input type="radio" name="q1" value="craftsman">自分と価値観が合うこと</li>
-              <li><input type="radio" name="q1" value="scholar">特に何も気にしない</li>
+              <li><input type="radio" name="q1" value="officer"  required>しっかりとした上下関係</li>
+              <li><input type="radio" name="q1" value="king" required>後輩から慕われること</li>
+              <li><input type="radio" name="q1" value="craftsman" required>自分と価値観が合うこと</li>
+              <li><input type="radio" name="q1" value="scholar" required>特に何も気にしない</li>
             </ul>
           </div>
 
@@ -47,10 +45,10 @@
             <p>質問3.</p>
             <p>課題が締切りに間に合わなさそう！どうする？</p>
             <ul>
-              <li><input type="radio" name="q2" value="king">とりあえず出す</li>
-              <li><input type="radio" name="q2" value="craftsman">諦める</li>
-              <li><input type="radio" name="q2" value="officer">先生に謝りに行く</li>
-              <li><input type="radio" name="q2" value="scholar">そんなことにはならない</li>
+              <li><input type="radio" name="q2" value="king" required>とりあえず出す</li>
+              <li><input type="radio" name="q2" value="craftsman" required>諦める</li>
+              <li><input type="radio" name="q2" value="officer" required>先生に謝りに行く</li>
+              <li><input type="radio" name="q2" value="scholar" required>そんなことにはならない</li>
             </ul>
           </div>
 
@@ -58,10 +56,10 @@
             <p>質問4.</p>
             <p>出来そうにない依頼をされたら？</p>
             <ul>
-              <li><input type="radio" name="q3" value="officer">努力してなんとか仕上げる</li>
-              <li><input type="radio" name="q3" value="scholar">猶予をもらってじっくり取り組む</li>
-              <li><input type="radio" name="q3" value="king">断れずに引き受け失敗する</li>
-              <li><input type="radio" name="q3" value="craftsman">きっぱり断る</li>
+              <li><input type="radio" name="q3" value="officer" required>努力してなんとか仕上げる</li>
+              <li><input type="radio" name="q3" value="scholar" required>猶予をもらってじっくり取り組む</li>
+              <li><input type="radio" name="q3" value="king" required>断れずに引き受け失敗する</li>
+              <li><input type="radio" name="q3" value="craftsman" required>きっぱり断る</li>
             </ul>
           </div>
 
@@ -69,10 +67,10 @@
             <p>質問5.</p>
             <p>学校のマラソン大会！あなたの行動は？</p>
             <ul>
-              <li><input type="radio" name="q4" value="king">上位を目指して走る</li>
-              <li><input type="radio" name="q4" value="officer">友達と勝負しながら走る</li>
-              <li><input type="radio" name="q4" value="craftsman">自分のペースで走る</li>
-              <li><input type="radio" name="q4" value="scholar">なぜ走らなければいけないのかと考える</li>
+              <li><input type="radio" name="q4" value="king" required>上位を目指して走る</li>
+              <li><input type="radio" name="q4" value="officer" required>友達と勝負しながら走る</li>
+              <li><input type="radio" name="q4" value="craftsman" required>自分のペースで走る</li>
+              <li><input type="radio" name="q4" value="scholar" required>なぜ走らなければいけないのかと考える</li>
             </ul>
           </div>
 
@@ -88,5 +86,6 @@
   <div id="footer">
     <small>&copy; DIT 2015 All Right Reserved.</small>
   </div>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

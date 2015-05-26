@@ -5,8 +5,7 @@ function result () {
   var j = 0;
   for (var i = 0; i < total; i++) {
     if (document.shindan.elements[i].checked) {
-      answer[j] = document.shindan.elements[i].value;
-      j++;
+      answer.push(document.shindan.elements[i].value);
     }
   }
 

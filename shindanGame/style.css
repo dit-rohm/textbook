@@ -34,3 +34,7 @@ img {
 ul {
   list-style-type: none;
 }
+
+.submit {
+  text-align: center;
+}
