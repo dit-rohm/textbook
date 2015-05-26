@@ -1,0 +1,30 @@
+.wrapper{
+  margin: 0 auto;
+  width: 1000px;
+  margin-top: 200px;
+}
+#problem{
+  text-align: center;
+  font-size: 20px;
+}
+h1{
+  text-align: center;
+}
+.selection{
+  text-align:center;
+}
+.button{
+  background: #EEE;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  color: #111;
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  font-size: 20px;
+  outline: none;
+}
+.button:hover{
+  background-color: #a1d7e0;
+  cursor: pointer;
+}
