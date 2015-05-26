@@ -12,7 +12,7 @@
 
 色の指定はありませんが、もし希望の色がない場合は以下の2色を使ってみてください。
 
-* \#18BC9C（Light  Sea Green）
+* \#18BC9C（Light Sea Green）
 * \#2C3E50（Madison）
 
 
