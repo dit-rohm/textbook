@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charaset="utf-8">
+  <meta charset="utf-8">
   <title>4タイプ診断 - DIT JS入門</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
       </div>
 
       <div class="questions">
-        <form name="shindan">
+        <form name="shindan" onsubmit="result(); return false;">
           <div class="question">
             <p>質問1.</p>
             <p>グループディスカッションにおけるあなたの役割は？</p>
@@ -73,12 +73,10 @@
               <li><input type="radio" name="q4" value="scholar" required>なぜ走らなければいけないのかと考える</li>
             </ul>
           </div>
-
+          <div class="submit">
+            <input type="submit" value="診断する">
+          </div>
         </form>
-      </div>
-
-      <div class="submit">
-        <input type="submit" value="診断する" onclick="result()">
       </div>
     </div>
 

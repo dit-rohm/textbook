@@ -25,6 +25,12 @@ img {
   padding: 20px;
 }
 
+.back {
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
+
 #footer {
   background-color: #212121;
   color: white;
