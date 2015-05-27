@@ -4,8 +4,8 @@
   margin-top: 200px;
 }
 #problem{
-  text-align: center;
   font-size: 20px;
+  text-align: center;
 }
 h1{
   text-align: center;
@@ -14,13 +14,13 @@ h1{
   text-align:center;
 }
 .button{
+  margin: 10px;
+  width: 100px;
+  height: 40px;
   background: #EEE;
   border: 1px solid #DDD;
   border-radius: 8px;
   color: #111;
-  width: 100px;
-  height: 40px;
-  margin: 10px;
   font-size: 20px;
   outline: none;
 }

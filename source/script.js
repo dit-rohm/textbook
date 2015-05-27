@@ -1,4 +1,4 @@
-qa = [ 
+var qa = [ 
   ["「テトリス（ゲーム）」を開発したのは、日本人だ。", 2],
   ["生きている間は、有名な人であっても広辞苑に載ることはない。 ", 1],
   ["現在、2000円札は製造を停止している。", 1],
@@ -12,9 +12,11 @@ qa = [
 ];
 
 var count = 0;
-var ans = 0;
+var correctnum = 0;
 
-setReady();
+window.onload = function() {
+  setReady();
+};
 
 //初期設定
 function setReady(){
@@ -32,11 +34,11 @@ function quiz() {
 function seikai(btnNo){
   if (btnNo == 1){
     if(qa[count][1] == 1){
-      ans++;
+      correctnum++;
     } 
   }else{
     if(qa[count][1] == 2){
-      ans++;
+      correctnum++;
     } 
   }
   if(count < 9){
@@ -48,7 +50,7 @@ function seikai(btnNo){
 
 //終了判定
 function end(){
-  document.getElementById("problem").innerHTML ="正解は" + ans + "問です";   
+  document.getElementById("problem").innerHTML ="正解は" + correctnum + "問です";   
   changeVisibility();
 }
 
