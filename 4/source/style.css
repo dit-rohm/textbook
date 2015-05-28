@@ -103,11 +103,16 @@ h2, h3, p {
   text-align: center;
 }
 
+.question-item p {
+  margin-bottom: 40px;
+}
+
 .footer {
   background-color: #2C3E50;
 }
 
 .footer-item {
+  margin-bottom: 20px;
   width: 33%;
   float: left;
   text-align: center;
