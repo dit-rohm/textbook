@@ -1,15 +1,15 @@
 var type = {
   king: 0, officer: 0, scholar: 0, craftsman: 0
-}
+};
 
-function result () {
+function result() {
   var answer = checkAnswer();
 
   countType(answer);
 
   var max = getMax(answer);
 
-  var result = getResult(max)
+  var result = getResult(max);
 
   showResult(result);
 }
@@ -18,7 +18,6 @@ function checkAnswer() {
   // 各回答をreturnAnswer配列に格納
   var total = document.shindan.length;
   var returnAnswer = [];
-  var j = 0;
   for (var i = 0; i < total; i++) {
     if (document.shindan.elements[i].checked) {
       returnAnswer.push(document.shindan.elements[i].value);
@@ -31,7 +30,7 @@ function checkAnswer() {
 function countType(answer) {
   // それぞれ数える
   for (var i = 0; i < answer.length; i++) {
-    switch(answer[i]){
+    switch (answer[i]) {
       case 'king':
         type.king++;
         break;
@@ -60,19 +59,21 @@ function getMax(answer) {
     var returnMax = getKey(i);
     if (returnMax.length > 0) break;
   }
+
   alert(returnMax);
   return returnMax;
 }
 
 // 一致するバリューがあればキーを配列で返す
-function　getKey(value) {
-    var returnKey = [];
-    for (var key in type) {
-        if (type[key] == value) {
-            returnKey.push(key);
-        }
+function getKey(value) {
+  var returnKey = [];
+  for (var key in type) {
+    if (type.hasOwnProperty(key) && type[key] == value) {
+      returnKey.push(key);
     }
-    return returnKey;
+  }
+
+  return returnKey;
 }
 
 function getResult(max) {
@@ -87,7 +88,7 @@ function getResult(max) {
 
 function showResult(result) {
   // タイプごとにページを移動させる
-  switch(result){
+  switch (result) {
     case 'king':
       location.href = './king.html';
       break;
