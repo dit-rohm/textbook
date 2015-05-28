@@ -2,11 +2,6 @@ body {
   margin: 0;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
 #header {
   background-color: #212121;
   color: white;
@@ -25,6 +20,19 @@ img {
   padding: 20px;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.submit {
+  text-align: center;
+}
+
 .back {
   cursor: pointer;
   text-decoration: underline;
@@ -34,13 +42,5 @@ img {
 #footer {
   background-color: #212121;
   color: white;
-  text-align: center;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.submit {
   text-align: center;
 }
