@@ -18,6 +18,7 @@ DITが開催する勉強会の教材です。
 
 ## 第4回勉強会
 1. [HTML, CSSの総まとめ](4/html-css.md)
+1. [HTML, CSSの総まとめ（解答）](4/html-css-text.md)
 
 ## その他
 1. [プロキシ設定（Mac編）](common/proxy_on_mac.md)

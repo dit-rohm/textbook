@@ -45,4 +45,6 @@ HTMLの構造は以下の図のようになっています。
 
 <a href="../3/basic_bloglike_layout.md" target="_blank">前回のテキスト</a>を確認してみましょう。
 
+### 解答
 
+今回の課題の解答は、<a href="./html-css-text.md" target="_blank">ここ</a>にあります！困った時や、自分の書いたコードの答え合わせなどに使用してください。
