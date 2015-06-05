@@ -10,10 +10,10 @@
 ![twitter](images/twitter.png)
 
 このように、JavaScriptを使うと、*動きのあるサイトが作れます。*
-	
+
 ## 動かしてみる
 
-では、基本的なプログラムを実際に動かしてみましょう。
+では、JavaScriptを実際に動かしてみましょう。
 
 1. [テンプレートファイル](./sample/js_template.zip)をダウンロードして解凍
 2. `script.js`をSublime Textで開く
@@ -28,33 +28,28 @@ alert("Hello World");
 
 ![alert](images/alert.png)
 
-## 関数
+## 関数（メソッド）
 
-複数の処理を一つにまとめる際に使うと覚えておけば良いでしょう。`alert`も関数の一つです。自分で関数を定義することもでき、以下のように書きます。
+`alert()`のような書き方をするものを関数（メソッド）と言います。*複数の処理を一つにまとめる*際に使うと覚えておけば良いでしょう。
+`alert`関数は予め定義されている関数です。自分で関数を定義することもでき、以下のように書きます。
 
 ```javascript
 function foo() {
-  // 何らかの処理
+  // 何らかの処理をここに書く
 }
 ```
 
-関数の中身を実行するためには、以下のようにします。
+関数を実行するには、以下のように書きます。
 
 ```javascript
 foo();
 ```
 
-### 引数（ひきすう）
-
-関数には引数と呼ばれる値を
-
-```javascript
-WIP
-```
-
 ## 変数
 
 変数は、数字や文字列が入れられる箱です。`var`（variableの略）を使って変数を宣言します。
+`=`記号がありますが、これは両辺が等しいという意味ではなく、*右辺を左辺に代入する*の意味です。
+間違いやすいので気をつけましょう。
 
 ```javascript
 var a = 100;
@@ -70,20 +65,16 @@ a = 0;
 
 この場合、変数`a`の中身は0になります。
 
-
-
 ## 変数とalertを使ったプログラム
 
 まずは、適当な変数を定義し、`alert`で変数の中身を表示してみましょう。
 
 ```javascript
 var suuji = 0;
-alert(suuji);
+alert(suuji); // 0が表示される
 ```
 
 ちゃんと0がダイアログボックスに表示されますね。このように、`alert`に変数の名前を指定すると、*その変数の中身を見ることができます。*
-
-*（この`alert`も`関数`です。このような便利な関数は予め定義されています。）*
 
 ### 四則演算
 
@@ -91,8 +82,9 @@ alert(suuji);
 
 ```javascript
 var suuji = 10;
-alert(suuji + 100);
+alert(suuji + 100); // 110が表示される
 ```
+
 10 + 100 が計算され、`110`がダイアログボックスに表示されますね。足し算と同様に、引き算、掛け算、割り算もできますが、数学と記号が違うので注意してください。
 
 |   /   |  数学  | JavaScript |
@@ -149,12 +141,28 @@ alert(suuji);
 ```javascript
 var alertButton = document.getElementById("alert-button");
 
-alertButton.addEventListener('click', function() {
-  alert('ボタンが押されました');
+alertButton.addEventListener("click", function() {
+  alert("ボタンが押されました");
 });
 ```
 
-このプログラムを実行すると、ボタンが押された時に`ボタンが押されました`とダイアログで表示されます。意味は後で解説するので、ひとまず動作を確認してみましょう。
+このプログラムを実行すると、ボタンが押された時に`ボタンが押されました`とダイアログで表示されるはずなのですが...。
+プログラム自体はあってますが、実はまだ動作しません。
+
+理由は、簡単に言うと、先ほど作ったid="alert-button"がついたボタンが読み込まれる前にJavaScriptが実行されているためです。
+これを解決するためには、すべてのプログラムを`window.onload`で囲む必要があります。
+
+```javascript
+window.onload = function() {
+  var alertButton = document.getElementById("alert-button");
+
+  alertButton.addEventListener("click", function() {
+    alert("ボタンが押されました");
+  });
+};
+```
+
+これでボタンを押すとアラートが表示されました。
 
 ### ボタンに動作を付ける（解説）
 
@@ -172,19 +180,25 @@ var alertButton = document.getElementById("alert-button");
 
 #### element.addEventListener()
 
-`addEventLister`というメソッドを使うことで、そのタグにイベントを指定することができます。第一引数がエベントの種類（今回の場合`click`）、第二引数がそのイベントが発生した際に実行する関数です。
+`addEventListener`というメソッドを使うことで、そのタグにイベントを指定することができます。第一引数がイベントの種類（今回の場合`click`）、第二引数がそのイベントが発生した際に実行する関数です。（引数については[ここ](http://www.ajaxtower.jp/js/function/index3.html)を参照してください）
 
 ```javascript
-alertButton.addEventListener('click', function() {
-  alert('ボタンが押されました');
+alertButton.addEventListener("click", function() {
+  alert("ボタンが押されました");
 });
 ```
 
 日本語にすると、「alertButtonに`click`イベントを設定します。このボタンがクリックされた時には、`alert`を実行してください」という感じです。
 
+#### window.onload = function() {};
+
+HTMLがすべてロードされた後にfunctionの中身が実行されます。
+HTMLが読み込まれていない状態で`document.getElementById`等が実行されてしまうと、
+JavaScriptはタグを見つけることができないので動作しません。
+
 ## 応用
 
-さて、ここまでJavaScriptでよく使う、基本的な文法や関数をみてきました。ここでは、それらを応用して動きのある例をみていきます。
+さて、ここまでJavaScriptでよく使う、変数や関数、クリックイベント等をみてきました。ここでは、それらを応用して動きのある例をみていきます。
 
 ### カウンターを作る
 
@@ -201,17 +215,18 @@ alertButton.addEventListener('click', function() {
 
 #### script.js
 ```javascript
-var count = 0;
-var button = document.getElementById("countup-button");
+window.onload = function() {
+  var count = 0;
+  var countButton = document.getElementById("countup-button");
 
-button.addEventListener('click', function() {
-  count++; // count = count + 1 と同義
-  document.getElementById("counter").innerHTML = count;
-});
+  countButton.addEventListener('click', function() {
+    count++; // count = count + 1 と同義
+    document.getElementById("counter").innerHTML = count;
+  });
+};
 ```
 
 `count`という変数を定義して、クリックされた時に+1しています。その後、`counter`の要素を取得して、タグの中身を`count`の値に書き換えています。`innerHTML`を使うと、タグの中身を書き換えたり、取得できたりします。
-
 
 ## クイズの解答
 ### Quiz.1
