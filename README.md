@@ -20,6 +20,11 @@ DITが開催する勉強会の教材です。
 1. [HTML, CSSの総まとめ](4/html-css.md)
 1. [HTML, CSSの総まとめ（解答）](4/html-css-text.md)
 
+## 第5回勉強会
+1. [JavaScript 入門](5/js.md)
+1. [おみくじを作ってみよう](5/omikuji.md)
+1. [おみくじを作ってみよう（解説）](5/omikuji_solution.md)
+
 ## その他
 1. [プロキシ設定（Mac編）](common/proxy_on_mac.md)
 1. [プロキシ設定（Windows編）](common/proxy_on_windows.md)
