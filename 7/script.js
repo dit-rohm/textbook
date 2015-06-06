@@ -60,7 +60,6 @@ function getMax(answer) {
     if (returnMax.length > 0) break;
   }
 
-  alert(returnMax);
   return returnMax;
 }
 
