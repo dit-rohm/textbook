@@ -1,7 +1,7 @@
 # まるばつクイズを作ろう(解答)
 
 ## HTMLのソースコード
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +25,7 @@
 ```
 
 ## CSSのソースコード
-```
+```css
 .wrapper {
   margin: 0 auto;
   width: 1000px;
@@ -56,11 +56,10 @@ h1 {
   background-color: #a1d7e0;
   cursor: pointer;
 }
-
 ```
 
 ## JavaScriptのソースコード
-```
+```javascript
 var qa = [
   ['「テトリス（ゲーム）」を開発したのは、日本人だ。', 2],
   ['生きている間は、有名な人であっても広辞苑に載ることはない。 ', 1],
