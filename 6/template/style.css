@@ -1,0 +1,36 @@
+.wrapper {
+  margin: 0 auto;
+  width: 1000px;
+  margin-top: 200px;
+}
+
+#question {
+  font-size: 20px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#buttons {
+  text-align:center;
+}
+
+.button {
+  margin: 10px;
+  width: 100px;
+  height: 40px;
+  background: #EEE;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  color: #111;
+  font-size: 20px;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #a1d7e0;
+  cursor: pointer;
+}
+

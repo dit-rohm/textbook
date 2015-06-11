@@ -1,72 +1,3 @@
-# まるばつクイズを作ろう(解答)
-
-## HTMLのソースコード
-```html
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <title>○×クイズ</title>
-</head>
-<body>
-  <div class="wrapper">
-    <h1>まるばつクイズ</h1>
-    <div id="question"></div>
-    <div id="buttons">
-      <input type="button" class="button" value="○" onclick="hantei(1)">
-      <input type="button" class="button" value="×" onclick="hantei(2)">
-    </div>
-  </div>
-  <script type="text/javascript" src="script.js"></script>
-</body>
-</html>
-```
-
-## CSSのソースコード
-
-```css
-.wrapper {
-  margin: 0 auto;
-  width: 1000px;
-  margin-top: 200px;
-}
-
-#question {
-  font-size: 20px;
-  text-align: center;
-}
-
-h1 {
-  text-align: center;
-}
-
-#buttons {
-  text-align:center;
-}
-
-.button {
-  margin: 10px;
-  width: 100px;
-  height: 40px;
-  background: #EEE;
-  border: 1px solid #DDD;
-  border-radius: 8px;
-  color: #111;
-  font-size: 20px;
-  outline: none;
-}
-
-.button:hover {
-  background-color: #a1d7e0;
-  cursor: pointer;
-}
-```
-
-## JavaScriptのソースコード
-
-```javascript
 var qa = [
   ['「テトリス（ゲーム）」を開発したのは、日本人だ。', 2],
   ['生きている間は、有名な人であっても広辞苑に載ることはない。 ', 1],
@@ -110,5 +41,4 @@ function hantei(btnNo) {
   var question = document.getElementById('question');
   question.innerHTML = (count + 1) + '問目：' + qa[count][0];
 }
-```
 
