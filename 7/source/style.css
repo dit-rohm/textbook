@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+
+#header {
+  background: #212121;
+  color: white;
+}
+
+#header h2 {
+  margin: 0 0 0 20px;
+}
+
+#wrapper {
+  margin: 0 auto;
+  width: 800px;
+}
+
+#main {
+  padding: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.submit {
+  text-align: center;
+}
+
+.back {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#footer {
+  background: #212121;
+  color: white;
+  text-align: center;
+}
