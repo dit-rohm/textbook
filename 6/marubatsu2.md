@@ -91,14 +91,8 @@ window.onload = function() {
 
 // クリック時の答え判定
 function hantei(btnNo) {
-  if (btnNo == 1) {
-    if (qa[count][1] == 1) {
-      correctNum++;
-    }
-  } else {
-    if (qa[count][1] == 2) {
-      correctNum++;
-    }
+  if (qa[count][1] == btnNo) {
+    correctNum++;
   }
 
   if (count == 9) {
