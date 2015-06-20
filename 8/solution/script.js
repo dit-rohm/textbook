@@ -19,11 +19,8 @@ function scroll() {
      */
     var alpha = 1 - pos/window_height;
 
-    /* CSSで使える形に変換。文字列として渡す */
-    var rgba = "rgba(24, 188, 156, " + alpha + ")"
-
     /* jQueryのcss関数でヘッダーのCSSの背景色をいじる。  */
-    $("div.header").css("background-color", rgba);
+    $("div.header").css("opacity", alpha);
   });
 }
 
@@ -50,3 +47,8 @@ function button_listener() {
   });
 }
 
+/* メンター画像のcarouselの部分 */
+window.setInterval(function() {
+  
+
+}, 1000);
