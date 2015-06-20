@@ -20,7 +20,7 @@ function scroll() {
     var alpha = 1 - pos/window_height;
 
     /* jQueryのcss関数でヘッダーのCSSの背景色をいじる。  */
-    $("div.header").css("opacity", alpha);
+    $("div#header").css("opacity", alpha);
   });
 }
 
@@ -49,6 +49,9 @@ function button_listener() {
 
 /* メンター画像のcarouselの部分 */
 window.setInterval(function() {
-  
-
-}, 1000);
+  var scroll_frame = $(".scroll_frame");
+  if (scroll_frame.scrollLeft() != 0)
+    scroll_frame.animate({scrollLeft: 0}, 1000);
+  else
+    scroll_frame.animate({scrollLeft: $(window).width()}, 1000);
+}, 8000);
