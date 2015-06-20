@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding :0
+}
+div#foo {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #0080ff;
+}
+
+div#foo > h1 {
+  color: #444444;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+div#button_container {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 300px;
+}
+
+button {
+  color: #444444;
+  background-color: #0080ff;
+  border: solid 1px #aaaaaa;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button:active {
+  background-color: #084dbf;
+}
+
+div#rouge_div {
+  position: absolute;
+  bottom: -100px;
+}
