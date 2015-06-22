@@ -25,10 +25,15 @@ DITが開催する勉強会の教材です。
 1. [おみくじを作ってみよう](5/omikuji.md)
 1. [おみくじを作ってみよう（解説）](5/omikuji_solution.md)
 
-##第6回勉強会
+## 第6回勉強会
 1. [JavaScript入門２](6/js2.md)
 1. [まるばつクイズを作ろう](6/marubatsu.md)
 1. [まるばつクイズを作ろう(解答)](6/marubatsu2.md)
+
+## 第7回勉強会
+1. [JavaScript入門3](7/js3.md)
+1. [診断ゲームを作ろう](7/shindan_exercise.md)
+1. [診断ゲームを作ろう(解答例)](7/shindan_answer.md)
 
 ## その他
 1. [プロキシ設定（Mac編）](common/proxy_on_mac.md)
