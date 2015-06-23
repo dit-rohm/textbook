@@ -291,10 +291,11 @@ function result() {
 最後に結果ページに飛ばすJavaScriptを記述します。
 
 ```js
+// location.href = 'ジャンプさせたいURL'
 location.href = './king.html';
 ```
 
-という記述で`'./king.html'`にページを遷移させます。`result()`から受け取った変数
+という記述で`'./king.html'`にページを遷移させます。
 
 ```js
 function showResult(result) {
@@ -303,3 +304,5 @@ function showResult(result) {
   } else if ...
 }
 ```
+
+`result()`から受け取った変数`result`をそのまま利用してジャンプさせる方法もあります。考えてみてください。
