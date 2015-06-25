@@ -175,6 +175,7 @@ function result() {
 配列(ex:`returnAnswer`)を宣言し、その配列にfor文で各回答を格納します。
 
 ```js
+var returnAnswer = [];
 var total = 5; // 問題数
 for (var i = 0; i < total; i++) {
   var value = document.shindan.elements['q' + i].value;
@@ -185,7 +186,7 @@ for (var i = 0; i < total; i++) {
 `.push`は配列に新規の要素を入れる関数です。最後に`return`文で結果を返します。
 
 ```js
-return hoge;
+return returnAnswer;
 ```
 
 とすることで、関数を呼び出した部分に`hoge`が返されます。これを返り値(戻り値)と呼びます。
