@@ -9,11 +9,13 @@
 今回の診断ゲームでは「ラジオボタン」を使用します。ラジオボタンとは「複数の選択肢から一つだけを選ぶボタン」のことです。ラジオボタンは以下のタグで設定できます。  
 
 ```html
+// 選択肢が1つだけ
 <p>Q. hoge?</p>
 <input type="radio" name="question" value="hoge" checked>hoge
 ```
 
 ```html
+// 選択肢が複数
 <p>Q. hoge?</p>
 <input type="radio" name="questions" value="hoge" checked>hoge
 <input type="radio" name="questions" value="fuga">fugo
@@ -32,9 +34,10 @@
 
 ### フォームの作成
 
-\<input>タグは\<form>の中に配置します。回答が集まってフォームを形成するというイメージです。
+`<input>`タグは`<form>`の中に配置します。設問が集まってフォームを形成するというイメージです。
 
 ```html
+// 以下 index.html に記入
 <form name="foobar">
   <p>hoge?</p>
   <input type="radio" name="questions" value="hoge" checked>hoge
@@ -48,6 +51,7 @@
 送信にはボタンを使い、`onclick`属性でJavaScriptの関数を呼び出します。
 
 ```html
+// 先ほどのコードにボタンを書き足し
 <form name="foobar">
   <p>hoge?</p>
   <input type="radio" name="questions" value="hoge" checked>hoge
@@ -59,6 +63,7 @@
 ```
 
 ```js
+// script.js に記入
 function result () {
   alert(document.foobar.questions.value);
 }
@@ -67,6 +72,10 @@ function result () {
 ちなみに`document.shindan.elements['question'].value`としても同じ結果が得られます。
 
 **IEでは表示出来ないようです。IE以外のブラウザをご利用ください。**
+
+[Google Chrome](https://www.google.co.jp/chrome/browser/desktop/), [Firefox](https://www.mozilla.org/ja/firefox/new/), [Opera](http://www.opera.com/ja)
+
+ここまで進んだら、いったん`index.html`と`script.js`の更新内容を破棄してください。
 
 ## オブジェクト
 
