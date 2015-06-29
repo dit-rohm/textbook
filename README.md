@@ -35,6 +35,10 @@ DITが開催する勉強会の教材です。
 1. [診断ゲームを作ろう](7/shindan_exercise.md)
 1. [診断ゲームを作ろう(解答例)](7/shindan_answer.md)
 
+## 第8回勉強会
+1. [JavaScript入門4](8/js4.md)
+1. [タッチザナンバーズを作ろう](8/touch_the_numbers.md)
+
 ## その他
 1. [プロキシ設定（Mac編）](common/proxy_on_mac.md)
 1. [プロキシ設定（Windows編）](common/proxy_on_windows.md)
