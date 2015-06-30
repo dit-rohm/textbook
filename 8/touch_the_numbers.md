@@ -108,7 +108,7 @@ if (nextNumber == 26) {
 ```javascript
 numbersArray.sort(function() {
   return Math.random() - 0.5;
-};
+});
 ```
 
 ### 2. タイマーを付ける
