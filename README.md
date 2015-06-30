@@ -38,6 +38,8 @@ DITが開催する勉強会の教材です。
 ## 第8回勉強会
 1. [JavaScript入門4](8/js4.md)
 1. [タッチザナンバーズを作ろう](8/touch_the_numbers.md)
+1. [タッチザナンバーズを作ろう(解答)](8/touch_the_numbers_answer.md)
+
 
 ## その他
 1. [プロキシ設定（Mac編）](common/proxy_on_mac.md)
