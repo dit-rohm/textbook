@@ -40,6 +40,9 @@ DITが開催する勉強会の教材です。
 1. [タッチザナンバーズを作ろう](8/touch_the_numbers.md)
 1. [タッチザナンバーズを作ろう(解答)](8/touch_the_numbers_answer.md)
 
+## 第9回勉強会
+1. [jQuery入門](9/jquery.md)
+1. [DITのようなサイトに動きを](9/improvements.md)
 
 ## その他
 1. [プロキシ設定（Mac編）](common/proxy_on_mac.md)
