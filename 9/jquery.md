@@ -7,7 +7,7 @@ jQueryとは、JavaScriptを使ってよく実現されるような機能をま�
 ## 使うには
 jQueryを使うには、jQueryのファイルを読み込ませなければなりません。ここではウェブ上に置かれているものを読み込むことにします。以下のように書くと読み込むことができます。
 ```html
-<script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 ```
 
 なお、これは執筆時点での最新版を読み込むものです。[jQuery CDN](https://code.jquery.com "jQuery CDN")で最新版を確認してください。minifiedのリンクで右クリックをし、リンクをコピーすると上記のURLが得られます。
