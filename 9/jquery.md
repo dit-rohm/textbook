@@ -59,7 +59,7 @@ $("div#foo").css({
 // セレクターを二回以上呼び出すので変数に格納してしまいます。
 var $divFoo = $("div#foo"); 
 
-$("div#foo").animate({
+$divFoo.animate({
 
   //.offset()は、親要素からみた座標を返すものです。オブジェクトとして返ってきます。
   top: $divFoo.offset().top + 10,
