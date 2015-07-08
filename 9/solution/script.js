@@ -1,3 +1,7 @@
+$(function() {
+	scroll();
+	button_listener();
+});
 $( scroll );
 $( button_listener );
 
