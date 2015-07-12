@@ -44,6 +44,10 @@ DITが開催する勉強会の教材です。
 1. [jQuery入門](9/jquery.md)
 1. [DITのようなサイトに動きを](9/improvements.md)
 
+## 第10回勉強会
+1. [Sublime Textのカスタマイズ](10/sublime.md)
+1. [Bootstrap入門](10/bootstrap.md)
+
 ## その他
 1. [プロキシ設定（Mac編）](common/proxy_on_mac.md)
 1. [プロキシ設定（Windows編）](common/proxy_on_windows.md)
