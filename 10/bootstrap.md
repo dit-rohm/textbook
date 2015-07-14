@@ -1,12 +1,12 @@
 # Bootstrap入門
-今回はBootstap入門を行います。
+今回はBootstrap入門を行います。
 BootstrapはCSSのフレームワークのことで、おしゃれなサイトやかっこいいボタンを簡単に作ることができます。
 また、Bootstrapを用いることでブラウザごとの対応や、レスポンシブなデザイン対応も容易になります。
 
 本記事ではBootstrapでどんなことができるのかをサンプルコードとともに紹介していきます。
 
 ## 導入
-Bootstapの導入について説明します。
+Bootstrapの導入について説明します。
 [公式サイト](http://getbootstrap.com/getting-started/)
 を開いてGetting started>Downloadで
 「Download Bootstrap」のボタンを押しましょう。
