@@ -58,4 +58,7 @@ window.setInterval(function() {
     $scroll_frame.animate({scrollLeft: 0}, 1000);
   else
     $scroll_frame.animate({scrollLeft: $(window).width()}, 1000);
+		console.log("----------")
+		console.log($(window).width())
+		console.log($().width())
 }, 8000);
