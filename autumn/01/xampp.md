@@ -147,7 +147,6 @@ $cfg['Servers'][$i]['password'] = '先ほど設定したパスワード';
 ```
 
 
-
 ### phpmyadminを見る
 
 今回の開発ではphpmyadminと呼ばれるブラウザ上でデータベースを操作したりすることのできるツールを使用していきますphpMyAdminにアクセスしましょう。[http://localhost/phpmyadmin/index.php](http://localhost/phpmyadmin/index.php)
