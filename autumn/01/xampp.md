@@ -29,6 +29,8 @@ XAMPP(ザンプ)とはWebアプリケーションの実行に必要なフリー�
 ここまで完了したら、一旦こちらにアクセスしてください。[http://localhost](http://localhost)  
 XAMPPの画面が表示されたら正しく動いています。日本語をクリックしてください。
 
+![xampp3](./images/xampp3.png)
+
 > #### 参考　もしApacheが起動できなかったら
 > 他のアプリが80番のポートを使っている可能性が大きいので、タスクマネージャ等でポートの確認をしてそのアプリを一旦落とすなり、ポートの番号を変更するなりしてください。PIDで2240番を使っているアプリになります。
 
@@ -133,7 +135,7 @@ XAMPPの設定画面にアクセスしてください。Macの方は[http://loca
 
 [http://localhost/xampp/splash.php](http://localhost/xampp/splash.php)の左側のセキュリティタブのページにて[http://localhost/security/xamppsecurity.php](http://localhost/security/xamppsecurity.php)のリンクをクリックしてください。
 
-![xampp3](./images/xampp3.png)  
+![xampp4](./images/xampp4.png)  
 
 このようなページになるかと思うので、上のMySQLの部分と下の.htaccessの部分いずれもパスワードを設定してください。それが完了したら、もう一度左側のセキュリティタブをクリックすると、今度はユーザ名とパスワードを聞かれるので、先ほど設定したものを入力すれば全てのステータスが安全に変わっていることが確認できると思います。
 
