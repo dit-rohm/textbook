@@ -195,14 +195,24 @@ CREATE TABLE user (student_id INT UNIQUE, ...);
 
 ## 連番をふる（AUTO_INCREMENT）
 
-AUTO_INCREMENTを指定したカラムには、自動
+AUTO_INCREMENTを指定したカラムには、値を入れなくても自動的に連番が振られていきます。
 
 ```
-CREATE TABLE user (student_id INT UNIQUE, ...);
+CREATE TABLE user (id INT AUTO_INCREMENT, ...);
 ```
 
+## NULL値を許可しない（NOT NULL）
 
+NULL値はデータが存在しないことを表す値です。NULL値を許可しない場合はNOT NULLを指定します。
 
+```
+CREATE TABLE user (name VARCHAR(255) NOT NULL, ...);
+```
 
+## デフォルト値を設定（DEFAULT）
 
-uniqe, prim key, foreign key, unsigned, auto increment, not null, default,
+テーブルにデータを追加する際、カラムに値が設定されていない場合にデフォルトで設定される値を指定することができます。
+
+```
+CREATE TABLE user (name VARCHAR(255) DEFAULT '未入力', ...);
+```
