@@ -156,4 +156,53 @@ SELECT name, email FROM user ORDER BY age DESC;
 
 # 値の制約
 
+SQLの表定義ではデータ値に制約を持たせることで、登録されるデータが常に正しい状態を保つことができます。
+
+## 主キーの指定（PRIMARY KEY）
+
+主キーとは、テーブルに格納されたレコードを一意に識別するための属性です。
+
+```
+CREATE TABLE user (id INT PRIMARY KEY, ...);
+```
+
+## 外部キーの指定（FOREIGN KEY）
+
+外部キーとは、テーブルの指定したカラムに格納できる値を他のテーブルに格納されている値だけに限定するものです。参照される側のテーブルを親テーブル、参照する側のテーブルを子テーブルと呼びます。
+
+親テーブル
+
+```
+CREATE TABLE user (id INT PRIMARY KEY, ...);
+```
+
+小テーブル
+
+```
+CREATE TABLE post (user_id INT, ...,
+  FOREIGN KEY (user_id)
+  REFERENCES user(id)
+);
+```
+
+## 一意な値（UNIQUE）
+
+UNIQUEを指定すると、指定した列（カラム）に重複する値を許しません。
+
+```
+CREATE TABLE user (student_id INT UNIQUE, ...);
+```
+
+## 連番をふる（AUTO_INCREMENT）
+
+AUTO_INCREMENTを指定したカラムには、自動
+
+```
+CREATE TABLE user (student_id INT UNIQUE, ...);
+```
+
+
+
+
+
 uniqe, prim key, foreign key, unsigned, auto increment, not null, default,
