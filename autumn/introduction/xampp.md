@@ -8,11 +8,13 @@ XAMPP(ザンプ)とはWebアプリケーションの実行に必要なフリー�
 
 ## XAMPPのインストール
 
-まずは<a href="http://sourceforge.net/projects/xampp/files/" target="_blank">こちらのサイト</a>にアクセスしてWindowsやMacなど適当なフォルダをクリックして、バージョンの1.7.3をダウンロードすることをお勧めします。
+まずは<a href="https://www.apachefriends.org/jp/index.html" target="_blank">こちらのサイト</a>にアクセスしてWindowsやMacなど適当な方をクリックして、最新バージョンを落としてください。
+勉強会に参加している方はUSBでインストーラを配布いたします。
 
 ![xampp1](./images/xampp1.png)  
   
 次にインストーラを起動すれば、基本的にインストーラの指示通りに次へをクリックし進めていけばインストールが完了すると思います。
+
 それぞれXAMPPがインストールされた場所は以下になっているかと思います。
 
 * Macの場合：/Applications/XAMPP
@@ -27,12 +29,12 @@ XAMPP(ザンプ)とはWebアプリケーションの実行に必要なフリー�
 
 スタートボタンをクリックしてApacheとMySQLを動作させてください。これでXAMPPの起動は完了です。
 ここまで完了したら、一旦こちらにアクセスしてください。[http://localhost](http://localhost)  
-XAMPPの画面が表示されたら正しく動いています。日本語をクリックしてください。
+以下のようなXAMPPの画面が表示されたら正しく動いています。
 
 ![xampp3](./images/xampp3.png)
 
 > #### 参考　もしApacheが起動できなかったら
-> 他のアプリが80番のポートを使っている可能性が大きいので、タスクマネージャ等でポートの確認をしてそのアプリを一旦落とすなり、ポートの番号を変更するなりしてください。PIDで2240番を使っているアプリになります。
+> 他のアプリ（主にSkype）が80番のポートを使っている可能性が大きいので、タスクマネージャ等でポートの確認をしてそのアプリを一旦落としてください。
 
 ## XAMPPの設定
 
@@ -40,7 +42,7 @@ XAMPPの画面が表示されたら正しく動いています。日本語をク
 
 ### 管理者権限の設定
 
-まずはこれから開発をしていくフォルダをいじれるように管理者権限の設定を行っていきます。これをしないとフォルダにアクセスすることができないためです。htdocsフォルダに管理者権限を与えていきます。※このフェーズは飛ばしていいこともあります。もしすでにアクセス権限がある場合は飛ばしてください。
+ここはMacの人のみ行ってください。まずはこれから開発をしていくフォルダをいじれるように管理者権限の設定を行っていきます。これをしないとフォルダにアクセスすることができないためです。htdocsフォルダに管理者権限を与えていきます。
 
 ####Macの場合
 /Applications/XAMPP/xamppfiles/htdocs 
@@ -49,16 +51,12 @@ XAMPPの画面が表示されたら正しく動いています。日本語をク
 * 共有とアクセス権をクリックし右下の鍵のアイコンをクリックしパスワードを入力
 * adminとeveryoneに対して読み書きをするに変更
 
-####Windowsの場合
-C:¥xampp¥htdocs
+もしくはターミナルのアプリにて`sudo chown `whoami` "/Applications/XAMPP/xamppfiles/htdocs/"`と打ってパスワードを入れてください。
 
-* 共有タブのセキュリティの詳細をクリック
-* 追加のプリンシパルの選択からユーザ名を入力
-* 基本のアクセス許可のフルコントロールにチェックを入れる
 
 ### HelloWorldをやってみる
 
-これが完了したら、Hello Worldをしてみましょう。同フォルダにSublime Textエディタを使って`hello.php`を作成してください。内容は以下です。
+それではHello Worldをしてみましょう。同フォルダにSublime Textなどのエディタを使って`hello.php`を作成してください。内容は以下です。
 
 ```php
 <?php
@@ -66,13 +64,18 @@ C:¥xampp¥htdocs
 ?>
 ```
 
-できたら、[http://localhost/hello.php](http://localhost/hello.php)にアクセスしてください。正しく表示できましたか？これで基本的なXAMPPの設定は完了です。それでは次に日本語の設定など細かい設定を説明していきます。
+できたら、[http://localhost/hello.php](http://localhost/hello.php)にアクセスしてください。Hello Worldと正しく表示できましたか？これで基本的なXAMPPの設定は完了です。それでは次に日本語の設定など細かい設定を説明していきます。
 
 
 ### php.iniの設定
 
-ここではPHPを扱う上での日本語の設定をしていきます。まずはXAMPPのフォルダの中のetcフォルダにあるphp.iniを編集していきます。このファイルをSublime Textなどのエディタで開いてみましょう。以下の設定を書き換えていきます。上の部分が元からあるので、下のようにその行を書き換えてください。その行を探すときはエディタ上でキーワードで検索するとすぐに出てくるかと思います。  
+ここではPHPを扱う上での日本語の設定をしていきます。まずはphp.iniを編集していきます。ファイルの場所は以下に示しておきます。このファイルをSublime Textなどのエディタで開いてみましょう。以下の設定を書き換えていきます。上の部分が元からあるので、下のようにその行を書き換えてください。その行を探すときはエディタ上でキーワードで検索するとすぐに出てくるかと思います。  
 これをする理由としては、以下のコードをみてもわかる通り、PHPファイルをアップした際に文字化けを起こす可能性があるので、文字の設定を行うためです。他にもその他各種設定を変えていきます。
+
+以下の設定を書き換えたファイルが[こちら](./sample/php.ini)になりますので、簡単にしたい方はこちらをコピペもしくはファイルの置き換えをしてください。
+
+* Macの場合：/Applications/XAMPP/etc/php.ini
+* Windowsの場合：C:¥xampp¥php¥php.ini
 
 * 文字エンコードの設定  
 `;default_charset = "iso-8859-1"`  
@@ -111,10 +114,16 @@ C:¥xampp¥htdocs
 ?>
 ```
 
+## 終わりに
+以上がXAMPPの基本的な設定となります。これで大体の設定は完了したので、すぐにでもWeb開発ができる状態です。あとは実際にコードを書いてWebサービスを実現していきましょう。環境を整える上で様々なエラーがあるあもしれませんが、近くにいるメンターに聞いたり、Google先生がほとんどのエラーを解決してくれるので、ご活用ください。
+
+## おまけ
+以下はより安全にXAMPPを使うために必要な設定となります。先ほど設定したもののまま例えば実際にサイトを運営したい、となるとセキュリティの面では何も設定していないので攻撃され放題の状況です。（今は自分の環境でのみ動くのでセキュリティの設定はしなくても問題ありません。）なので、興味のある方、または実際にサイトを動かしてみたいといった方は以下のセキュリティの設定をしてください。
+
 ### 管理者の設定
 
 管理者を設定していきます。
-XAMPPの設定画面にアクセスしてください。Macの方は[http://localhost/xampp/](http://localhost/xampp/)、Windowsの方は[http://localhost/xampp/splash.php](http://localhost/xampp/splash.php)になります。
+XAMPPの設定画面にアクセスしてください。Macの方は[http://localhost/xampp/](http://localhost/xampp/)、Windowsの方は[http://localhost/security/splash.php](http://localhost/security/splash.php)になります。
 左側のカラムのセキュリティをクリックしてください。ここでステータスを見ると要注意となっているのがわかるかと思います。この設定を変更して安全にしていきます。
 
 ####Macの場合
@@ -135,7 +144,7 @@ XAMPPの設定画面にアクセスしてください。Macの方は[http://loca
 
 #### Windowsの場合
 
-[http://localhost/xampp/splash.php](http://localhost/xampp/splash.php)の左側のセキュリティタブのページにて[http://localhost/security/xamppsecurity.php](http://localhost/security/xamppsecurity.php)のリンクをクリックしてください。
+[http://localhost/security/splash.php](http://localhost/security/splash.php)の左側のセキュリティタブのページにて[http://localhost/security/xamppsecurity.php](http://localhost/security/xamppsecurity.php)のリンクをクリックしてください。
 
 ![xampp4](./images/xampp4.png)  
 
@@ -155,7 +164,4 @@ $cfg['Servers'][$i]['password'] = '先ほど設定したパスワード';
 
 今回の開発ではphpmyadminと呼ばれるブラウザ上でデータベースを操作したりすることのできるツールを使用していきますphpMyAdminにアクセスしましょう。[http://localhost/phpmyadmin/index.php](http://localhost/phpmyadmin/index.php)
 ここでもユーザ名とパスワードが聞かれるので、ユーザ名はroot、パスワードは先ほど設定したものを入れてください。今後はこちらのページを使ってデータベースの操作を行っていくので覚えておいてください。
-
-## 終わりに
-以上がXAMPPの基本的な設定となります。これで大体の設定は完了したので、すぐにでもWeb開発ができる状態です。あとは実際にコードを書いてWebサービスを実現していきましょう。環境を整える上で様々なエラーがあるあもしれませんが、近くにいるメンターに聞いたり、Google先生がほとんどのエラーを解決してくれるので、ご活用ください。
 
