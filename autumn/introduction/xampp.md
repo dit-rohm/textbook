@@ -54,19 +54,6 @@ XAMPP(ザンプ)とはWebアプリケーションの実行に必要なフリー�
 もしくはターミナルのアプリにて`sudo chown `whoami` "/Applications/XAMPP/xamppfiles/htdocs/"`と打ってパスワードを入れてください。
 
 
-### HelloWorldをやってみる
-
-それではHello Worldをしてみましょう。同フォルダにSublime Textなどのエディタを使って`hello.php`を作成してください。内容は以下です。
-
-```php
-<?php
-    echo "Hello World!";
-?>
-```
-
-できたら、[http://localhost/hello.php](http://localhost/hello.php)にアクセスしてください。Hello Worldと正しく表示できましたか？これで基本的なXAMPPの設定は完了です。それでは次に日本語の設定など細かい設定を説明していきます。
-
-
 ### php.iniの設定
 
 ここではPHPを扱う上での日本語の設定をしていきます。まずはphp.iniを編集していきます。ファイルの場所は以下に示しておきます。このファイルをSublime Textなどのエディタで開いてみましょう。以下の設定を書き換えていきます。上の部分が元からあるので、下のようにその行を書き換えてください。その行を探すときはエディタ上でキーワードで検索するとすぐに出てくるかと思います。  
@@ -76,10 +63,6 @@ XAMPP(ザンプ)とはWebアプリケーションの実行に必要なフリー�
 
 * Macの場合：/Applications/XAMPP/etc/php.ini
 * Windowsの場合：C:¥xampp¥php¥php.ini
-
-* 文字エンコードの設定  
-`;default_charset = "iso-8859-1"`  
-`default_charset = "UTF-8"`
 
 * 言語設定のデフォルトを日本語に  
 `;mbstring.language = Japanese`  
@@ -93,19 +76,12 @@ XAMPP(ザンプ)とはWebアプリケーションの実行に必要なフリー�
 `;mbstring.internal_encoding = EUC-JP`  
 `mbstring.internal_encoding = UTF-8`
 
-* 入力文字エンコードを自動に  
-`;mbstring.http_input = auto`  
-`mbstring.http_input = auto`
 
-* 出力文字エンコードを変換しないように  
-`;mbstring.http_output = SJIS`  
-`mbstring.http_output = pass`
+### HelloWorldをやってみる
 
-* 入力エンコード変換を有効に  
-`;mbstring.encoding_translation = Off`  
-`mbstring.encoding_translation = On`
-
-以上ができれば、一度Apacheを停止し、再度スタートさせてから、先ほど作成した`hello.php`を以下に書き換えてみて、日本語が正しく表示されるかを確認してください。
+以上ができれば、一度Apacheを停止し、再度スタートさせてください。
+それではHello Worldをしてみましょう。同フォルダにSublime Textなどのエディタを使って`hello.php`を作成してください。内容は以下です。
+できたら、[http://localhost/hello.php](http://localhost/hello.php)にアクセスしてください。Hello Worldと正しく表示できましたか？これで基本的なXAMPPの設定は完了です。
 
 ```php
 <?php
