@@ -50,7 +50,7 @@ PHPの変数は`$`をつけて宣言します。`index.php`の中身を消して
 
 ```php
 <?php
-  $foo = "Hello World";  
+  $foo = "Hello World";
   print $foo . "!!";
 ```
 
@@ -74,9 +74,9 @@ PHPにおけるif文の書き方は2通りあります。動作確認したい�
 ```php
 <?php
   if ($a > $b) {
-    print "$aのほうが大きい";
+    print "aのほうが大きい";
   } elseif ($a == $b) {
-    print "$aと$bが同じ";  
+    print "aとbが同じ";
   } else {
     print "それ以外";
   }
