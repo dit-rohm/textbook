@@ -26,7 +26,7 @@ XAMPPを起動して[http://localhost/helloworld/index.php](http://localhost/hel
 
 ## 2. HTMLと組み合わせる
 
-PHPのコードはHTMLの中に埋め込むことができます。書いてみましょう。
+HTML文の中にPHPのコードを埋め込むことができます。同じく`index.php`に以下のコードを書いてみましょう。
 
 ```html
 <!DOCTYPE html>
