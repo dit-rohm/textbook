@@ -28,7 +28,7 @@ XAMPP(ザンプ)とはWebアプリケーションの実行に必要なフリー�
 ![xampp2](./images/xampp2.png)  
 
 スタートボタンをクリックしてApacheとMySQLを動作させてください。これでXAMPPの起動は完了です。
-ここまで完了したら、一旦こちらにアクセスしてください。[http://localhost](http://localhost)  
+ここまで完了したら、一旦<a href="http://localhost" target="_blank">http://localhost</a>にアクセスしてください。
 以下のようなXAMPPの画面が表示されたら正しく動いています。
 
 ![xampp3](./images/xampp3.png)
@@ -38,7 +38,7 @@ XAMPP(ザンプ)とはWebアプリケーションの実行に必要なフリー�
 
 ### phpMyAdminを見る
 
-今回の開発ではphpMyAdminと呼ばれるブラウザ上でデータベースを操作したりすることのできるツールを使用していきます。phpMyAdminにアクセスしましょう。[http://localhost/phpmyadmin/index.php](http://localhost/phpmyadmin/index.php)今後はこちらのページを使ってデータベースの操作を行っていくので覚えておいてください。
+今回の開発ではphpMyAdminと呼ばれるブラウザ上でデータベースを操作したりすることのできるツールを使用していきます。<a href="http://localhost/phpmyadmin/index.php" target="_blank">http://localhost/phpmyadmin/index.php</a>にアクセスしましょう。今後はこちらのページを使ってデータベースの操作を行っていくので覚えておいてください。
 
 ## 終わりに
 以上がXAMPPの基本的な設定となります。これで大体の設定は完了したので、すぐにでもWeb開発ができる状態です。あとは実際にコードを書いてWebサービスを実現していきましょう。環境を整える上で様々なエラーがあるあもしれませんが、近くにいるメンターに聞いたり、Google先生がほとんどのエラーを解決してくれるので、ご活用ください。
@@ -49,7 +49,7 @@ XAMPP(ザンプ)とはWebアプリケーションの実行に必要なフリー�
 ### 管理者の設定
 
 管理者を設定していきます。
-XAMPPの設定画面にアクセスしてください。Macの方は[http://localhost/xampp/](http://localhost/xampp/)、Windowsの方は[http://localhost/security/splash.php](http://localhost/security/splash.php)になります。
+XAMPPの設定画面にアクセスしてください。Macの方は<a href="http://localhost/xampp/" target="_blank">http://localhost/xampp/</a>、Windowsの方は<a href="http://localhost/security/splash.php" target="_blank">http://localhost/security/splash.php</a>になります。
 左側のカラムのセキュリティをクリックしてください。ここでステータスを見ると要注意となっているのがわかるかと思います。この設定を変更して安全にしていきます。
 
 ####Macの場合
@@ -70,7 +70,7 @@ XAMPPの設定画面にアクセスしてください。Macの方は[http://loca
 
 #### Windowsの場合
 
-[http://localhost/security/splash.php](http://localhost/security/splash.php)の左側のセキュリティタブのページにて[http://localhost/security/xamppsecurity.php](http://localhost/security/xamppsecurity.php)のリンクをクリックしてください。
+<a href="http://localhost/security/splash.php" target="_blank">http://localhost/security/splash.php</a>の左側のセキュリティタブのページにて<a href="http://localhost/security/xamppsecurity.php" target="_blank">http://localhost/security/xamppsecurity.php</a>のリンクをクリックしてください。
 
 ![xampp4](./images/xampp4.png)  
 
@@ -84,5 +84,3 @@ $cfg['Servers'][$i]['auth_type'] = 'config';
 $cfg['Servers'][$i]['user'] = 'root';
 $cfg['Servers'][$i]['password'] = '先ほど設定したパスワード';
 ```
-
-
