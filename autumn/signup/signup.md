@@ -17,14 +17,6 @@
 #### signup.php
 
 ```html 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>signup - Ditter</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-</head>
 <body>
   <div id="main" class="container">
     <div class="row">
@@ -71,7 +63,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
-</html>
 ```
 
 ### HTMLの説明
@@ -129,7 +120,7 @@ HTMLでフォームを作成するには、まず、
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-	if ((isset($_POST['user_name']) || $_POST['user_name'] !== '') && (isset($_POST['screen_name']) || $_POST['screen_name'] !== '') && (isset($_POST['email']) || $_POST['email'] !== '') && (isset($POST['password']) || $_POST['password'] !== '')) {
+	if ((isset($_POST['user_name']) || $_POST['user_name'] !== '') && (isset($_POST['screen_name']) || $_POST['screen_name'] !== '') && (isset($_POST['email']) || $_POST['email'] !== '') && (isset($_POST['password']) || $_POST['password'] !== '')) {
   
 		// 送信された値を変数に代入
 		$user_name = $_POST['user_name'];
@@ -262,7 +253,7 @@ function connectDb() {
 
 define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8');
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'rootのパスワード');
+define('DB_PASSWORD', '');
 ```
 
 これらの`config.php`と`functions.php`を`signup.php`から読み込むことで、ここで定義した定数や関数を使用することが出来ます。`signup.php`の`<?php`のすぐ下の行に以下を追記して下さい。これで`functions.php`と`signup.php`を読み込むことができます。
