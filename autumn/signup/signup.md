@@ -16,12 +16,11 @@
 
 #### signup.php
 
-```html 
+```html
 <body>
   <div id="main" class="container">
     <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-md-push-4">
         <h1>新規登録</h1>
         <!-- フォーム部分 -->
         <form action="" method="POST">
@@ -83,7 +82,7 @@
 HTMLでフォームを作成するには、まず、
 
 > 引用
-> 
+>
 > ```php
 <form action="" method="POST"> ... </form>
 ```
@@ -111,7 +110,7 @@ HTMLでフォームを作成するには、まず、
 それでは、<a href="http://localhost/ditter/signup.php" target="_blank">http://localhost/ditter/signup.php</a>にアクセスしてみて下さい。最初に提示した作成する画面と同じものが見れれば成功です！今は、新規登録ボタンを押しても何も変わりません。
 
 ## 2. データを受け取る部分（PHP）
-  
+
 それでは次に、フォームから値が送信されてきた時の動作を書いていきましょう。ここからはPHPになります。引き続き、`signup.php`を編集していきます。`signup.php`には、既に先ほどのHTML部分が書かれているかとは思いますが、そのまま上部に追記して下さい。
 
 #### signup.php
@@ -121,14 +120,14 @@ HTMLでフォームを作成するには、まず、
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	if ((isset($_POST['user_name']) || $_POST['user_name'] !== '') && (isset($_POST['screen_name']) || $_POST['screen_name'] !== '') && (isset($_POST['email']) || $_POST['email'] !== '') && (isset($_POST['password']) || $_POST['password'] !== '')) {
-  
+
 		// 送信された値を変数に代入
 		$user_name = $_POST['user_name'];
 		$screen_name = $_POST['screen_name'];
 		$email = $_POST['email'];
 		$password = $_POST['password'];
 		$comment = $_POST['comment'];
-		
+
 	} else {
  		print "値が入力されていません";
 	}
@@ -143,7 +142,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') { ... }
 ```
 
-フォームには、 **ユーザ名**、 **ユーザID**、 **メールアドレス**、 **パスワード**、 **一言**、の5つの項目があったので、`$user_name`、`$screen_name`、`$email`、`$password`、`$comment`という変数を用意します。ユーザIDは`$screen_name`としていますので注意して下さい。以下の行で、値されているか、または入力されているかのチェックをしています。
+フォームには、 **ユーザ名**、 **ユーザID**、 **メールアドレス**、 **パスワード**、 **一言**、の5つの項目があったので、`$user_name`、`$screen_name`、`$email`、`$password`、`$comment`という変数を用意します。
+ユーザIDは`$screen_name`としていますので注意して下さい。以下の行で、値がセットされていて`NULL`でないこと、または空文字になっていないかのチェックをしています。
 
 > 引用
 >
@@ -215,7 +215,7 @@ PRIMARY KEY (`id`)
 usersテーブルには、8つのカラムがあり、それぞれの内容は以下のようになっています。
 
 * **id** - ユーザごとに独自のIDを自動でふっておく。
-* **screen_name** - ユーザIDを保存、15文字以内、必須、一意。 
+* **screen_name** - ユーザIDを保存、15文字以内、必須、一意。
 * **user_name** - ユーザ名を保存、15文字以内、必須。
 * **email** - メールアドレスを保存、必須、一意,
 * **password** - パスワードを保存、必須,
@@ -244,7 +244,7 @@ function connectDb() {
 }
 ```
 
-ここで、<a href="http://php.net/manual/ja/pdo.construct.php" target="_blank">PDO::__construct</a>メソッドを使用してインスタンスを生成しています。DSN（Data Source Name）にはデータベースに接続するために必要な情報（MySQL、データベース名、ホスト、文字セット）を、DB_USERにはユーザー名、DB_PASSWORDにはパウワードが入ります。それぞれ、`config.php`に定数として以下のように定義しておきます。
+ここで、<a href="http://php.net/manual/ja/pdo.construct.php" target="_blank">PDO::__construct</a>メソッドを使用してインスタンスを生成しています。DSN（Data Source Name）にはデータベースに接続するために必要な情報（MySQL、データベース名、ホスト、文字セット）を、DB_USERにはユーザー名、DB_PASSWORDにはパスワードが入ります。それぞれ、`config.php`に定数として以下のように定義しておきます。
 
 #### config.php
 
@@ -336,7 +336,7 @@ $statement = $db->prepare($sql);
 次に、
 
 > 引用
-> 
+>
 > ```php
 $statement->bindValue(':screen_name', $screen_name, PDO::PARAM_STR);
 $statement->bindValue(':user_name', $user_name, PDO::PARAM_STR);
@@ -350,7 +350,7 @@ $statement->bindValue(':comment', $comment, PDO::PARAM_STR);
 最後に、
 
 > 引用
-> 
+>
 > ```php
 $statement->execute()
 ```
