@@ -23,7 +23,7 @@
       <div class="col-md-4 col-md-push-4">
         <h1>新規登録</h1>
         <!-- フォーム部分 -->
-        <form action="" method="POST">
+        <form action="./signup.php" method="POST">
           <!-- ユーザ名 -->
           <div class="form-group">
             <label for="userName">ユーザ名（必須）</label>
@@ -71,7 +71,7 @@
 >  引用
 >
 > ```php
-<form action="" method="POST">
+<form action="./signup.php" method="POST">
 	<div class="form-group">
 		<label for="userName">ユーザ名</label>
     	<input type="text" class="form-control" id="userName" name="user_name" placeholder="3文字以上15文字以下" />
@@ -84,10 +84,10 @@ HTMLでフォームを作成するには、まず、
 > 引用
 >
 > ```php
-<form action="" method="POST"> ... </form>
+<form action="./signup.php" method="POST"> ... </form>
 ```
 
-のように正式にフォームを用意します。ここで、action属性は、フォームから収集したデータが送られるべき場所(URL)を定義します。`action=""`と空の文字列にすると、form要素が置かれたページ自身へ送信されるので、今回の場合、データはこの`signup.php`に送信されます。そして、action属性は必ず書かなければなりません。method属性は、データを送る際のHTTPメソッド("get"または"post")を定義します。今回はpostを使用します。次に、`<form>`の中に`<input>`や`<textarea>`を追加します。type属性によって`<input>`要素の動作を定義することが出来ます。例えば、以下はテキストを入力するフォームです。
+のように正式にフォームを用意します。ここで、action属性は、フォームから収集したデータが送られるべき場所(URL)を定義します。今回は`action="./signup.php`のように、同じファイルにデータを送信するように指定しています。そして、action属性は必ず書かなければならず、`action=""`のように空文字にすることもHTML 5.1以降許されません。method属性は、データを送る際のHTTPメソッド("get"または"post")を定義します。今回はpostを使用します。次に、`<form>`の中に`<input>`や`<textarea>`を追加します。type属性によって`<input>`要素の動作を定義することが出来ます。例えば、以下はテキストを入力するフォームです。
 
 > 引用
 >
