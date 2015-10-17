@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>index - Ditter</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 70px;
+    }
+  </style>
 </head>
 <body>
 	<!-- <h1>Hello World</h1> -->
 	<!-- Fixed navbar -->
-	<style>
-		body {
-			padding-top: 70px;
-		}
-	</style>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -61,8 +61,8 @@
 				<div class="modal-body">
 					<form action="" method="post">
 						<div class="form-group">
-							<label for="postText" class="control-label">メッセージ（140字まで）：</label>
-							<textarea class="form-control" id="postText" name="postText" maxlength="140"></textarea>
+							<label for="postText1" class="control-label">メッセージ（140字まで）：</label>
+							<textarea class="form-control" id="postText1" name="postText" maxlength="140"></textarea>
 						</div>
 						<button type="submit" class="btn btn-primary">投稿する</button>
 					</form>
@@ -103,7 +103,7 @@
 					<div class="panel-body">
             <form action="" method="post">
               <div class="form-group">
-                <textarea class="form-control" id="postText" name="postText" maxlength="140"></textarea>
+                <textarea class="form-control" id="postText2" name="postText" maxlength="140"></textarea>
               </div>
               <button type="submit" class="btn btn-primary">投稿</button>
             </form>
@@ -127,11 +127,9 @@
 									<button type="button" class="btn btn-primary reply-btn" data-toggle="modal" data-target="#replyModal">
 										<span class="glyphicon glyphicon-send" aria-hidden="true"></span>　返信する
 									</button>
-									<a href="">
-										<button type="submit" class="btn btn-danger reply-btn" name="delete_post">
-											<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>　削除する
-										</button>
-									</a>
+                  <button type="submit" class="btn btn-danger reply-btn" name="delete_post">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>　削除する
+                  </button>
 								</p>
 							</div>
 						</li>
@@ -145,11 +143,9 @@
 									<button type="button" class="btn btn-primary reply-btn" data-toggle="modal" data-target="#replyModal">
 										<span class="glyphicon glyphicon-send" aria-hidden="true"></span>　返信する
 									</button>
-									<a href="">
-										<button type="submit" class="btn btn-danger reply-btn" name="delete_post">
-											<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>　削除する
-										</button>
-									</a>
+                  <button type="submit" class="btn btn-danger reply-btn" name="delete_post">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>　削除する
+                  </button>
 								</p>
 							</div>
 						</li>
