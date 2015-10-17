@@ -67,7 +67,7 @@
           <a href=""><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> 更新</a>
         </li>
         <li>
-          <a href=""><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> ログアウト</a>
+          <a href=""><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> サインアウト</a>
         </li>
       </ul>
     </div>
