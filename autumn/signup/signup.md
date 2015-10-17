@@ -12,7 +12,7 @@
 
 ## 1. 見た目部分（HTML）
 
-まずは、HTMLの部分から書いていきます。`signup.php`の`<body>`の中身を追記して下さい。HTMLの書き方でわからない部分があれば、<a href="" target="_blank">HTMLリファレンス</a>を読むか、メンターに質問して下さい。
+まずは、HTMLの部分から書いていきます。`signup.php`の`<body>`の中身を追記して下さい。HTMLの書き方でわからない部分があれば、<a href="./../../spring/common/html_reference.md" target="_blank">HTMLリファレンス</a>を読むか、メンターに質問して下さい。
 
 #### signup.php
 
