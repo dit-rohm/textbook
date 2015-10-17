@@ -119,7 +119,7 @@ HTMLでフォームを作成するには、まず、
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-	if ((isset($_POST['user_name']) || $_POST['user_name'] !== '') && (isset($_POST['screen_name']) || $_POST['screen_name'] !== '') && (isset($_POST['email']) || $_POST['email'] !== '') && (isset($_POST['password']) || $_POST['password'] !== '')) {
+	if ((isset($_POST['user_name']) && $_POST['user_name'] !== '') && (isset($_POST['screen_name']) && $_POST['screen_name'] !== '') && (isset($_POST['email']) && $_POST['email'] !== '') && (isset($_POST['password']) && $_POST['password'] !== '')) {
 
 		// 送信された値を変数に代入
 		$user_name = $_POST['user_name'];
@@ -148,7 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { ... }
 > 引用
 >
 >```php
-if ((isset($_POST['user_name']) || $_POST['user_name'] !== '') && ...) { ... }
+if ((isset($_POST['user_name']) && $_POST['user_name'] !== '') && ...) { ... }
 ```
 
 `$_POST['comment']`だけはNULLを許すので、それ以外について全てチェックします。
