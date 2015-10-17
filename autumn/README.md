@@ -13,8 +13,10 @@
 ## 新規登録機能
 1. [新規登録機能の作成](signup/signup.md)
 
-## トップページの作成
+## サインイン機能
 1. [サインイン機能の作成](signin/signin.md)
+
+## トップページの作成
 1. [トップページの見た目の作成](makeIndexPage/addIndexPage.md)
 
 ## サインアウト機能
