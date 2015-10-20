@@ -256,14 +256,25 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 ```
 
-これらの`config.php`と`functions.php`を`signup.php`から読み込むことで、ここで定義した定数や関数を使用することが出来ます。`signup.php`の`<?php`のすぐ下の行に以下を追記して下さい。これで`functions.php`と`signup.php`を読み込むことができます。
+これらの`config.php`と`functions.php`を別のファイルから読み込むことで、ここで定義した定数や関数を使用することが出来ます。ページ表示を行うすべてのファイルから読み込みますので、二つをまとめた`init.php`を作成し、これを各PHPファイルから読み込みます。
+
+`signup.php`の`<?php`のすぐ下の行に以下を追記して下さい。
+
+#### init.php
+
+```php
+<?php
+require_once 'config.php';
+require_once 'functions.php';
+```
+
+そして、`signup.php`は以下のように追記してください。
 
 #### signup.php
 
 ```php
 <?php
-require_once('config.php');
-require_once('functions.php');
+require_once 'init.php';
 ```
 
 ここまでで接続準備は終わりです。
