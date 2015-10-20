@@ -7,7 +7,7 @@
 プロフィールページの作成が終わったら，デベロッパーツールを開いてみてください．
 デベロッパーツールには様々な機能がありますが，その中の一つにモバイル向けのデバッグ機能として搭載された「エミュレーション機能」というものがあります．
 スマートフォンやタブレットなど様々なデバイスでの表示の確認ができます．
-（デベロッパーツールについての説明は<a href="../common/dev_tool.md" target="_blank">ここ</a>にあります）
+（デベロッパーツールについての説明は<a href="./../../common/dev_tool.md" target="_blank">ここ</a>にあります）
 デベロッパーツールのスマホのアイコンをクリックしてください．
 
 ![](images/how_to_design_responsively/4.png)
@@ -91,6 +91,3 @@ HTMLのにmeta要素として記述します．
 * [レスポンシブWebデザインはviewportとメディアクエリーからはじめろ！](https://web.archive.org/web/20140725140332/http://barktoimagine.com/web/846)
 * [CSS3 Media Queries を使って，Webサイトをスマートフォンに対応させるときの注意書き](http://webdesignrecipes.com/web-design-for-mobile-with-css3-media-queries)
 * [レスポンシブWebデザインの作り方（簡単設定方法）](http://webdesignerwork.jp/web/responsivewebdesign/)
-
-
-
