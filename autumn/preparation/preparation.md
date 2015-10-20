@@ -11,6 +11,7 @@ ditterの中は以下のようになっています。
 ├── config.php      # 設定を保管しておくためのファイル
 ├── functions.php   # 関数を書いておくためのファイル
 ├── index.php       # トップページに関するファイル
+├── init.php        # config.phpとfunctions.phpを呼ぶファイル 
 ├── reply.php       # リプライ画面に関するファイル
 ├── signin.php      # サインイン画面に関するファイル
 ├── signout.php     # サインアウト画面に関するファイル
