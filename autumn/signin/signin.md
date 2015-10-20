@@ -325,9 +325,26 @@ function escape($s) {
 
 さて、最後の節です。ユーザがサインインしたら別のページヘ飛ばさなければ不親切ですよね？また、既にサインイン済みのユーザがこのページにアクセスするのは全くの無駄です。
 
-リダイレクトは`header("Location: {アドレス}");`と書くことで実現できます。
+リダイレクトは`header("Location: {URL}");`と書くことで実現できます。
 
-以下がリダイレクトするためのコードです。
+### リダイレクトのコード
+
+- function.php
+
+これまでのコードの下に追記してください。
+
+```php
+...
+function isSignin()
+{
+    if (!isset($_SESSION['user_id'])) {
+        // 変数に値がセットされていない場合
+        return false;
+    } else {
+        return true;
+    }
+}
+```
 
 - signin.php
 
@@ -335,15 +352,17 @@ function escape($s) {
 ...
 ...
 
-if (!empty($_SESSION['user_id'])) {
-  $index_url = "index.php";
-  header("Location: {$index_url}");
-  exit;
+// true だったらサインインしているので index.php へ飛ばす
+if (isSignin()) {
+    $index_url = 'index.php';
+    header("Location: {$index_url}");
+    exit;
 }
 
 ...
 ...
 
+// エラーが無ければセッションIDを発行して index.php へ飛ばす
   } else if (empty($error)) {
     $_SESSION['user_id'] = $user_id;
     $index_url = "index.php";
