@@ -349,8 +349,8 @@ function isSignin()
 - signin.php
 
 ```php
-...
-...
+<?php
+require_once 'init.php';
 
 // true だったらサインインしているので index.php へ飛ばす
 if (isSignin()) {
@@ -361,9 +361,11 @@ if (isSignin()) {
 
 ...
 ...
-
-// エラーが無ければセッションIDを発行して index.php へ飛ばす
+  // この if 文はすでに書いていますので、 else if の処理を付け足してください。
+  if (!$user_id = getUserId($email, $password, $db)) {
+    $error = 'パスワードとメールアドレスが正しくありません';
   } else if (empty($error)) {
+    // エラーが無ければセッションIDを発行して index.php へ飛ばす
     $_SESSION['user_id'] = $user_id;
     $index_url = "index.php";
     header("Location: {$index_url}");
