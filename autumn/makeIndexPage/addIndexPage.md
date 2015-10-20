@@ -358,4 +358,4 @@
 
 ## まとめ
 お疲れ様でした！トップページの作成はこれで終わりです。
-HTMLやbootstrapについて難しいと感じた人は[リファレンス](https://github.com/dit-rohm/textbook/blob/master/spring/common/html_reference.md)や[公式ページ](http://getbootstrap.com)を確認して復習しておきましょう！
+HTMLやbootstrapについて難しいと感じた人は[リファレンス](./../../common/html_reference.md)や[公式ページ](http://getbootstrap.com)を確認して復習しておきましょう！

@@ -1,8 +1,5 @@
 # 秋学期
 
-## 参考
-1. [MySQLリファレンス](reference/mysql.md)
-
 ## 導入・準備 
 1. [導入](introduction/introduction.md)
 1. [Ditterについて](introduction/about_ditter.md)

@@ -12,7 +12,7 @@
 
 ## 1. 見た目部分（HTML）
 
-まずは、HTMLの部分から書いていきます。`signup.php`の`<body>`の中身を追記して下さい。HTMLの書き方でわからない部分があれば、<a href="./../../spring/common/html_reference.md" target="_blank">HTMLリファレンス</a>を読むか、メンターに質問して下さい。
+まずは、HTMLの部分から書いていきます。`signup.php`の`<body>`の中身を追記して下さい。HTMLの書き方でわからない部分があれば、<a href="./../../common/html_reference.md" target="_blank">HTMLリファレンス</a>を読むか、メンターに質問して下さい。
 
 #### signup.php
 
@@ -196,7 +196,7 @@ $comment = $_POST['comment'];
 
 新規登録やログインをするには、ユーザの情報を保存する必要があります。そのために、`users`というテーブルを用意し、情報を保存していきましょう。
 
-上部にあるタブから **SQL**をクリックし、以下のSQL文を貼り付け、実行ボタンを押して下さい。 MYSQLに関するより詳しい説明は、<a href="./../reference/mysql.md" target="_blank">MySQLリファレンス</a>に載っているので、見ながら進めて下さい。
+上部にあるタブから **SQL**をクリックし、以下のSQL文を貼り付け、実行ボタンを押して下さい。 MYSQLに関するより詳しい説明は、<a href="./../../common/mysql.md" target="_blank">MySQLリファレンス</a>に載っているので、見ながら進めて下さい。
 
 ```sql
 CREATE TABLE `users` (
