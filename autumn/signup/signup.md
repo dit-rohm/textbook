@@ -251,12 +251,22 @@ function connectDb() {
 ```php
 <?php
 
-define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8');
+define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 ```
 
 これらの`config.php`と`functions.php`を`signup.php`から読み込むことで、ここで定義した定数や関数を使用することが出来ます。`signup.php`の`<?php`のすぐ下の行に以下を追記して下さい。これで`functions.php`と`signup.php`を読み込むことができます。
+
+```php
+// セミコロン区切りの場合
+define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+
+// スペース区切りの場合
+define('DSN', 'mysql:dbname=ditter host=localhost charset=utf8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+```
+
+データベース名やホスト名、文字セットの各要素の区切り文字にはセミコロンもしくはスペースを使用してください．
 
 #### signup.php
 
