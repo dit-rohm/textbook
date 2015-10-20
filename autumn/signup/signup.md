@@ -251,7 +251,7 @@ function connectDb() {
 ```php
 <?php
 
-define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8');
+define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 ```
@@ -269,6 +269,16 @@ require_once 'functions.php';
 ```
 
 そして、`signup.php`は以下のように追記してください。
+
+```php
+// セミコロン区切りの場合
+define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+
+// スペース区切りの場合
+define('DSN', 'mysql:dbname=ditter host=localhost charset=utf8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+```
+
+データベース名やホスト名、文字セットの各要素の区切り文字にはセミコロンもしくはスペースを使用してください．
 
 #### signup.php
 
