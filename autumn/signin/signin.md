@@ -135,7 +135,7 @@ Ditterではこの仕組を利用して、ログインしているユーザに�
 require_once 'config.php';
 require_once 'functions.php';
 // 以下を追記
-session_start()
+session_start();
 ```
 
 - signin.php
