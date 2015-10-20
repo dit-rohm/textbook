@@ -124,18 +124,25 @@ Bootstrapのメイン機能の一つ、カラムを利用しています。サ�
 
 Ditterではこの仕組を利用して、ログインしているユーザにセッションIDを発行することでユーザを識別し、個々に合わせて異なる処理を行うことが可能となります。
 
-`session_start()`を記述することでセッションを利用できます。
+`session_start()`を記述することでセッションを利用できます。セッションはどのページ表示を行うファイルでも利用しますので、`init.php`に含めます。
 
 ### セッションを設定するコード
+
+- init.php
+
+```php
+<?php
+require_once 'config.php';
+require_once 'functions.php';
+// 以下を追記
+session_start()
+```
 
 - signin.php
 
 ```php
 <?php
-require_once('config.php');
-require_once('functions.php');
-
-session_start();
+require_once 'init.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   session_regenerate_id(true);
@@ -327,7 +334,6 @@ function escape($s) {
 ```php
 ...
 ...
-session_start();
 
 if (!empty($_SESSION['user_id'])) {
   $index_url = "index.php";
@@ -356,11 +362,11 @@ if (!empty($_SESSION['user_id'])) {
 
 ```php
 <?php
-  session_start();
+require_once 'init.php';
 
-  echo "<pre>";
-  print_r($_SESSION);
-  echo "</pre>";
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";
 ```
 
 以上で`signin.php`の編集は終了です。かなり長い章でしたが、お疲れ様でした。
