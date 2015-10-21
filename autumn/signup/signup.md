@@ -236,7 +236,7 @@ PHPでデータベースに接続する際に、今回は **PDOクラス**を使
 ```php
 function connectDb() {
   try {
-    return new PDO(DSN, DB_USER, DB_PASSWORD);
+    return new PDO(DSN, DB_USER, DB_PASSWORD, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
   } catch (PDOException $e) {
     print $e->getMessage();
     exit;
@@ -251,7 +251,7 @@ function connectDb() {
 ```php
 <?php
 
-define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 ```
@@ -260,10 +260,10 @@ define('DB_PASSWORD', '');
 
 ```php
 // セミコロン区切りの場合
-define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8');
 
 // スペース区切りの場合
-define('DSN', 'mysql:dbname=ditter host=localhost charset=utf8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+define('DSN', 'mysql:dbname=ditter host=localhost charset=utf8');
 ```
 
 これらの`config.php`と`functions.php`を別のファイルから読み込むことで、ここで定義した定数や関数を使用することが出来ます。ページ表示を行うすべてのファイルから読み込みますので、二つをまとめた`init.php`を作成し、これを各PHPファイルから読み込みます。
