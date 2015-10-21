@@ -145,8 +145,6 @@ session_start();
 require_once 'init.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  session_regenerate_id(true);
-
   $error = '';
   $email = $_POST['email'];
   $password = $_POST['password'];
@@ -155,6 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (!$user_id = getUserId($email, $password, $db)) {
     $error = 'パスワードとメールアドレスが正しくありません';    
   } else if (empty($error)) {
+    session_regenerate_id(true);
     $_SESSION['user_id'] = $user_id;
   }
 }
@@ -366,6 +365,7 @@ if (isSignin()) {
     $error = 'パスワードとメールアドレスが正しくありません';
   } else if (empty($error)) {
     // エラーが無ければセッションIDを発行して index.php へ飛ばす
+    session_regenerate_id(true);
     $_SESSION['user_id'] = $user_id;
     $index_url = "index.php";
     header("Location: {$index_url}");
