@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		writePost($db, $user_id, $postText);
 		// 2重投稿防止のためにリロードする処理
 		header('Location: ' . $_SERVER['SCRIPT_NAME']);
+		exit;
 	}
 }
 
