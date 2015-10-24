@@ -1,9 +1,9 @@
 # DIT
 DITが開催する勉強会の教材です。
 
-## 教材 
-1. [春学期](spring/README.md)
-1. [秋学期](autumn/README.md)
+## 教材
+1. [春学期（HTML, CSS, JavaScript）](spring/README.md)
+1. [秋学期（PHP, MySQL）](autumn/README.md)
 
 ## 参考
 1. [HTMLリファレンス](common/html_reference.md)
