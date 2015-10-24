@@ -300,33 +300,48 @@ require_once 'init.php';
 
 ```php
 ...
-$comment = $_POST['comment'];
+...
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  if ((isset($_POST['user_name']) && $_POST['user_name'] !== '' ) ... ...) {
+    ...
+    ...
+    $comment = $_POST['comment'];
 
 
-//ここから下を追記
+    // --- ここから下を追記 --- 
+    
+    // 接続関数を変数に代入
+    $db = connectDb();
 
-// 接続関数を変数に代入
-$db = connectDb();
+    $hash = password_hash($password, PASSWORD_DEFAULT);
 
-$hash = password_hash($password, PASSWORD_DEFAULT);
+    $sql = 'INSERT INTO users (screen_name, user_name, email, password, comment) 
+      VALUES (:screen_name, :user_name, :email, :password, :comment)';
 
-$sql = 'INSERT INTO users (screen_name, user_name, email, password, comment) VALUES (:screen_name, :user_name, :email, :password, :comment)';
+    $statement = $db->prepare($sql);
 
-$statement = $db->prepare($sql);
+    $statement->bindValue(':screen_name', $screen_name, PDO::PARAM_STR);
+    $statement->bindValue(':user_name', $user_name, PDO::PARAM_STR);
+    $statement->bindValue(':email', $email, PDO::PARAM_STR);
+    $statement->bindValue(':password', $hash, PDO::PARAM_STR);
+    $statement->bindValue(':comment', $comment, PDO::PARAM_STR);
 
-$statement->bindValue(':screen_name', $screen_name, PDO::PARAM_STR);
-$statement->bindValue(':user_name', $user_name, PDO::PARAM_STR);
-$statement->bindValue(':email', $email, PDO::PARAM_STR);
-$statement->bindValue(':password', $hash, PDO::PARAM_STR);
-$statement->bindValue(':comment', $comment, PDO::PARAM_STR);
-
-if($statement->execute()) {
-  $signin_url = "signin.php";
-  header("Location: {$signin_url}");
-  exit;
-} else {
-  print "データベースへの挿入に失敗しました";
-}
+    if($statement->execute()) {
+      $signin_url = "signin.php";
+      header("Location: {$signin_url}");
+      exit;
+    } else {
+      print "データベースへの挿入に失敗しました";
+    }
+    
+    // --- 追記ここまで --- 
+    
+    ...
+    ...
+  } else {
+    print "値が入力されていません";
+  }
+}    
 ```
 
 パスワードはそのままデータベースに保存してしまうとセキュリティ面で問題があるので、以下のようにパスワードハッシュを作り、`$hash`に代入しておきます。
