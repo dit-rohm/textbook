@@ -119,7 +119,10 @@ HTMLでフォームを作成するには、まず、
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-	if ((isset($_POST['user_name']) && $_POST['user_name'] !== '') && (isset($_POST['screen_name']) && $_POST['screen_name'] !== '') && (isset($_POST['email']) && $_POST['email'] !== '') && (isset($_POST['password']) && $_POST['password'] !== '')) {
+	if ((isset($_POST['user_name']) && $_POST['user_name'] !== '') && 
+	(isset($_POST['screen_name']) && $_POST['screen_name'] !== '') && 
+	(isset($_POST['email']) && $_POST['email'] !== '') && 
+	(isset($_POST['password']) && $_POST['password'] !== '')) {
 
 		// 送信された値を変数に代入
 		$user_name = $_POST['user_name'];
@@ -236,7 +239,7 @@ PHPでデータベースに接続する際に、今回は **PDOクラス**を使
 ```php
 function connectDb() {
   try {
-    return new PDO(DSN, DB_USER, DB_PASSWORD);
+    return new PDO(DSN, DB_USER, DB_PASSWORD, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
   } catch (PDOException $e) {
     print $e->getMessage();
     exit;
@@ -251,7 +254,7 @@ function connectDb() {
 ```php
 <?php
 
-define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 ```
@@ -260,10 +263,10 @@ define('DB_PASSWORD', '');
 
 ```php
 // セミコロン区切りの場合
-define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+define('DSN', 'mysql:dbname=ditter;host=localhost;charset=utf8');
 
 // スペース区切りの場合
-define('DSN', 'mysql:dbname=ditter host=localhost charset=utf8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+define('DSN', 'mysql:dbname=ditter host=localhost charset=utf8');
 ```
 
 これらの`config.php`と`functions.php`を別のファイルから読み込むことで、ここで定義した定数や関数を使用することが出来ます。ページ表示を行うすべてのファイルから読み込みますので、二つをまとめた`init.php`を作成し、これを各PHPファイルから読み込みます。
@@ -297,33 +300,48 @@ require_once 'init.php';
 
 ```php
 ...
-$comment = $_POST['comment'];
+...
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  if ((isset($_POST['user_name']) && $_POST['user_name'] !== '' ) ... ...) {
+    ...
+    ...
+    $comment = $_POST['comment'];
 
 
-//ここから下を追記
+    // --- ここから下を追記 --- 
+    
+    // 接続関数を変数に代入
+    $db = connectDb();
 
-// 接続関数を変数に代入
-$db = connectDb();
+    $hash = password_hash($password, PASSWORD_DEFAULT);
 
-$hash = password_hash($password, PASSWORD_DEFAULT);
+    $sql = 'INSERT INTO users (screen_name, user_name, email, password, comment) 
+      VALUES (:screen_name, :user_name, :email, :password, :comment)';
 
-$sql = 'INSERT INTO users (screen_name, user_name, email, password, comment) VALUES (:screen_name, :user_name, :email, :password, :comment)';
+    $statement = $db->prepare($sql);
 
-$statement = $db->prepare($sql);
+    $statement->bindValue(':screen_name', $screen_name, PDO::PARAM_STR);
+    $statement->bindValue(':user_name', $user_name, PDO::PARAM_STR);
+    $statement->bindValue(':email', $email, PDO::PARAM_STR);
+    $statement->bindValue(':password', $hash, PDO::PARAM_STR);
+    $statement->bindValue(':comment', $comment, PDO::PARAM_STR);
 
-$statement->bindValue(':screen_name', $screen_name, PDO::PARAM_STR);
-$statement->bindValue(':user_name', $user_name, PDO::PARAM_STR);
-$statement->bindValue(':email', $email, PDO::PARAM_STR);
-$statement->bindValue(':password', $hash, PDO::PARAM_STR);
-$statement->bindValue(':comment', $comment, PDO::PARAM_STR);
-
-if($statement->execute()) {
-  $signin_url = "signin.php";
-  header("Location: {$signin_url}");
-  exit;
-} else {
-  print "データベースへの挿入に失敗しました";
-}
+    if($statement->execute()) {
+      $signin_url = "signin.php";
+      header("Location: {$signin_url}");
+      exit;
+    } else {
+      print "データベースへの挿入に失敗しました";
+    }
+    
+    // --- 追記ここまで --- 
+    
+    ...
+    ...
+  } else {
+    print "値が入力されていません";
+  }
+}    
 ```
 
 パスワードはそのままデータベースに保存してしまうとセキュリティ面で問題があるので、以下のようにパスワードハッシュを作り、`$hash`に代入しておきます。

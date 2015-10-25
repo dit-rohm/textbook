@@ -12,3 +12,5 @@
 1. [サインイン機能の作成](signin/signin.md)
 1. [トップページの見た目の作成](makeIndexPage/addIndexPage.md)
 1. [サインアウト機能の作成](signout/signout.md)
+1. [投稿一覧表示の作成](timeline/timeline.md)
+1. [投稿機能の作成](post/post.md)
