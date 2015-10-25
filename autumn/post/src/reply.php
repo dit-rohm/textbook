@@ -1,6 +1,9 @@
 <?php
 // PHP部分はここに書きます
-  
+if (!isSignin()) {
+	$signin_url = 'signin.php';
+	header("Location: {$signin_url}");
+}	
 ?>
 <!DOCTYPE html>
 <html lang="ja">
