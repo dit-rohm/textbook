@@ -55,17 +55,15 @@ if (!isSignin())
 
 アドレスバーに"localhost/phpmyadmin/"と入力して、phpMyAdminを開いてください。
 
-左ペインにあるデータベースの中から「ditter」データベースを選んでください。
+左ペインにあるデータベースの中から「`ditter`」データベースを選んでください。
 
-右ペインの「表示」、「構造」と並んでいる中から「SQL」を選択してください。
+![ditterデータベース](./images/choose_ditterdb.png)
 
-![データの挿入](./images/insert_cui_like.png)
+右ペインの「構造」の右にある「SQL」を選択してください。
 
-```SQL
-SELECT * FROM `posts` WHERE 1
-```
+![SQL入力フォーム](./images/create_table.png)
 
-と書いてある箇所を下記の「`posts`テーブルを作成するSQL」書き換えて、右下の実行を押してください。
+「データベース ditter 上でクエリを実行する」の下にあるフォームに下記の「`posts`テーブルを作成するSQL」を入力して、右下の実行を押してください。
 
 ### `posts`テーブルを作成するSQL
 
