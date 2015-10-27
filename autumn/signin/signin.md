@@ -385,9 +385,9 @@ if (isSignin()) {
 <?php
 require_once 'init.php';
 
-echo "<pre>";
+print "<pre>";
 print_r($_SESSION);
-echo "</pre>";
+print "</pre>";
 ```
 
 以上で`signin.php`の編集は終了です。かなり長い章でしたが、お疲れ様でした。
