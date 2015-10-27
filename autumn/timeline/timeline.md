@@ -55,9 +55,7 @@ if (!isSignin())
 
 アドレスバーに"localhost/phpmyadmin/"と入力して、phpMyAdminを開いてください。
 
-左ペインにあるデータベースの中から「ditter」データベースの「posts」テーブルを選んでください。
-
-![データベースリスト](./images/database_list.png)
+左ペインにあるデータベースの中から「ditter」データベースを選んでください。
 
 右ペインの「表示」、「構造」と並んでいる中から「SQL」を選択してください。
 
