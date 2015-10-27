@@ -385,9 +385,9 @@ if (isSignin()) {
 <?php
 require_once 'init.php';
 
-echo "<pre>";
+print "<pre>";
 print_r($_SESSION);
-echo "</pre>";
+print "</pre>";
 ```
 
 上記は確認用のコードなので、確認が終わったら削除しておいてください。
