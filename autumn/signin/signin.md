@@ -43,7 +43,6 @@
             <label for="InputPassword1">パスワード</label>
             <input type="password" class="form-control" id="inputPassword" name="password">
           </div>
-          <input type="hidden" name="token" value="">
           <button type="submit" class="btn btn-default">サインイン</button>
         </form>  
         <p>新規登録は<a href="./signup.php">こちら</a></p>
@@ -183,7 +182,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- エラーメッセージを表示する段落<p>を追記 -->
     <p><?php if (isset($error)) { print escape($error); }?></p>
   </div>
-  <button type="submit" class="btn btn-default">ログイン</button>
+  <button type="submit" class="btn btn-default">サインイン</button>
 </form>
 ...
 ...
