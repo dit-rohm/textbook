@@ -54,7 +54,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="active"><a href="/">ホーム</a></li>
-        <li><a href="/reply.php">返信</a></li>
+        <li><a href="./reply.php">返信</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
