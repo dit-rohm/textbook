@@ -63,6 +63,12 @@ $user_id = $_SESSION['user_id'];
 #### index.php
 
 ```php
+...
+...
+
+$user_id = $_SESSION['user_id'];
+
+// 以下追記
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (isset($_POST['postText'])){
     $postText = $_POST['postText'];
@@ -72,6 +78,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
   }
 }
+// 追記ここまで
+?>
+
+...
+...
 ```
 
 `index.php`を開いて投稿をしてみましょう。
