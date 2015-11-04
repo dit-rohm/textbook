@@ -276,7 +276,7 @@ echo "</pre>";
             <li class="list-group-item">
                 <div class="container-fluid">
                     <p class="text-center">
-                        <strong>ツイートがありません。</strong>
+                        <strong>投稿がありません。</strong>
                     </p>
                 </div>
             </li>
@@ -338,23 +338,10 @@ if文で投稿の取得ができているかを判定しています。
                                 data-target="#replyModal">
                             <span class="glyphicon glyphicon-send" aria-hidden="true"></span>　返信する
                         </button>
-                        <?php if ($user_id == $post_by['id']): ?>
-                            <?php
-                            if ($current_page == 1) {
-                                if (isset($_GET['page'])) {
-                                    $delete_url = $_SERVER['REQUEST_URI'].'&delete_post_id='.$value['id'];
-                                } else {
-                                    $delete_url = $_SERVER['REQUEST_URI'].'?delete_post_id='.$value['id'];
-                                }
-                            } else {
-                                $delete_url = $_SERVER['REQUEST_URI'].'&delete_post_id='.$value['id'];
-                            }
-                            ?>
-                            <button type="button" class="btn btn-danger reply-btn" name="delete_post"
-                                    onclick="location.href='<?php print $delete_url ?>'">
-                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>　削除する
-                            </button>
-                        <?php endif; ?>
+                        <button type="button" class="btn btn-danger reply-btn" name="delete_post"
+                                onclick="">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>　削除する
+                        </button>
                     </p>
                 </div>
             </li>
