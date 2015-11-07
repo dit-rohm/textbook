@@ -200,7 +200,8 @@ if (isset($_GET['delete_post_id'])) {
 											<span class="glyphicon glyphicon-send" aria-hidden="true"></span>　返信する
 										</button>
 										<?php if ($user_id == $post_by['id']): ?>
-											<?php
+
+										<!--	<?php
 											if ($current_page == 1) {
 												if (isset($_GET['page'])) {
 													$delete_url = $_SERVER['REQUEST_URI'].'&delete_post_id='.$value['id'];
@@ -210,7 +211,8 @@ if (isset($_GET['delete_post_id'])) {
 											} else {
 												$delete_url = $_SERVER['REQUEST_URI'].'&delete_post_id='.$value['id'];
 											}
-											?>
+											?>  -->
+											
 											<?php if ($user_id == $post_by['id']): ?>
 												<a class="btn btn-danger reply-btn" href="<?php print 'index.php?delete_post_id='.$value['id'] ?>">
 													<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>　削除する
@@ -271,5 +273,14 @@ if (isset($_GET['delete_post_id'])) {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // リプライ時にスクリーンネームを埋めておく
+        $('.reply-btn').click(function () {
+            var $screen_name = $(this).parent().siblings('.reply-to').text();
+            $('#replyText').val($screen_name + ' ');
+        });
+    });
+</script>
 </body>
 </html>
