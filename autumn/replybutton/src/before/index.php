@@ -200,19 +200,6 @@ if (isset($_GET['delete_post_id'])) {
 											<span class="glyphicon glyphicon-send" aria-hidden="true"></span>　返信する
 										</button>
 										<?php if ($user_id == $post_by['id']): ?>
-
-										<!--	<?php
-											if ($current_page == 1) {
-												if (isset($_GET['page'])) {
-													$delete_url = $_SERVER['REQUEST_URI'].'&delete_post_id='.$value['id'];
-												} else {
-													$delete_url = $_SERVER['REQUEST_URI'].'?delete_post_id='.$value['id'];
-												}
-											} else {
-												$delete_url = $_SERVER['REQUEST_URI'].'&delete_post_id='.$value['id'];
-											}
-											?>  -->
-											
 											<?php if ($user_id == $post_by['id']): ?>
 												<a class="btn btn-danger reply-btn" href="<?php print 'index.php?delete_post_id='.$value['id'] ?>">
 													<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>　削除する
