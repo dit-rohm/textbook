@@ -61,6 +61,15 @@ function getUserData($pdo, $id)
 	}
 }
 
+
+function writePost($db, $user_id, $text) {
+  $sql = 'INSERT INTO posts (user_id,text) VALUES (:user_id, :text)';
+  $statement = $db->prepare($sql);
+  $statement->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+  $statement->bindValue(':text', $text, PDO::PARAM_STR);
+  $statement->execute();
+}
+
 function getPost($pdo, $post_id)
 {
 	$sql = 'SELECT * FROM posts WHERE id = :post_id';
