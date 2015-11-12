@@ -1,14 +1,18 @@
 # user情報の表示
+
 今まではユーザー情報がテンプレートを表示していましたが、
 今回はこれをユーザーごとに変えるような処理をしていきましょう！
 
 ### 完成図
+
 ![userData](./images/userData.png)
 
 ### 要求仕様
+
 現在、ログインしているユーザーの情報を表示する。
 
 ### 作成手順
+
  1. function.phpにgetUserData関数を確認する。
  2. index.phpでユーザーの情報を表示する。
 
@@ -16,7 +20,7 @@
 
 #### function.php
 
-```
+```php
 ...
 ...
 function getUserData(PDO $pdo, $id)
@@ -34,14 +38,15 @@ function getUserData(PDO $pdo, $id)
 }
 ...
 ...
-
 ```
 
 なければ、追加しておきましましょう。
 
 ### コードの解説
+
 以前にした、投稿一覧の表示の作成で記述したgetUserData関数です。  
-```
+
+```php
 $sql = 'SELECT * FROM users WHERE id=:id'; 
 $statement = $pdo->prepare($sql);
 $statement->bindValue(':id', $id, PDO::PARAM_INT);
@@ -49,6 +54,7 @@ $statement->execute();
 ```
 
 の部分でデータベースからデータを取得しています。
+
  > http://qiita.com/tabo_purify/items/2575a58c54e43cd59630  
 こちらのサイトである程度わかりやすく記述されていますので、見てみてください。
 
@@ -56,7 +62,7 @@ $statement->execute();
 
 #### index.php
 
-```
+```php
 <?php
 ...
 ...
@@ -99,10 +105,11 @@ $comment = $user_data["comment"];
 それを編集してください。
 
 ### コードの解説
+
 解説というほどの解説はないですが、
 解説していきましょう。
 
-```
+```php
 <?php
 ...
 ...
@@ -114,10 +121,11 @@ $comment = $user_data["comment"];
 ...
 ?>
 ```
+
 まず、HTML部分で使いやすい様に`getUserData`で得たuser情報をそれぞれ変数に代入しておきます。
 データベースの情報は連想配列で取得しているので、`$user_data['なんとか']`で取得できますね。
 
-``` 
+```php
 ...
 ...
 <!-- ユーザ情報表示領域 -->
