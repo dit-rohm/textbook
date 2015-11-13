@@ -45,11 +45,11 @@ function getUserData(PDO $pdo, $id)
 ### コードの解説
 
 以前にした、
-(投稿一覧の表示の作)[https://github.com/dit-rohm/textbook/blob/master/autumn/timeline/timeline.md]
-成で記述したgetUserData関数です。  
+[投稿一覧の表示の作成](https://github.com/dit-rohm/textbook/blob/master/autumn/timeline/timeline.md)
+で記述したgetUserData関数です。  
 
 ```php
-$sql = 'SELECT * FROM users WHERE id=:id'; 
+$sql = 'SELECT * FROM users WHERE id=:id';
 $statement = $pdo->prepare($sql);
 $statement->bindValue(':id', $id, PDO::PARAM_INT);
 $statement->execute();
