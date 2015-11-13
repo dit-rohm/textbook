@@ -1,7 +1,7 @@
 # user情報の表示
 
-今まではユーザー情報がダミーを表示していましたが、
-今回はこれをユーザーごとに変えるような処理をしていきましょう！
+今まではユーザー情報を仮置きを表示していましたが、
+今回はこれを現在ログインしているユーザーごとに変えるような処理をしていきましょう！
 
 ### 完成図
 
@@ -16,7 +16,7 @@
  1. function.phpにgetUserData関数を確認する。
  2. index.phpでユーザーの情報を表示する。
 
-## 1. function.phpにgetUserData関数が存在するか確認しましょう。
+## 1. function.phpにgetUserData関数が存在するか確認しましょう
 
 #### function.php
 
@@ -44,7 +44,9 @@ function getUserData(PDO $pdo, $id)
 
 ### コードの解説
 
-以前にした、投稿一覧の表示の作成で記述したgetUserData関数です。  
+以前にした、
+(投稿一覧の表示の作)[https://github.com/dit-rohm/textbook/blob/master/autumn/timeline/timeline.md]
+成で記述したgetUserData関数です。  
 
 ```php
 $sql = 'SELECT * FROM users WHERE id=:id'; 
@@ -58,7 +60,9 @@ $statement->execute();
  > http://qiita.com/tabo_purify/items/2575a58c54e43cd59630  
 こちらのサイトである程度わかりやすく記述されていますので、見てみてください。
 
-## 2. index.phpでユーザーの情報を表示する。
+## 2. index.phpでユーザーの情報を表示する
+
+では、index.phpでユーザー情報を表示してみましょう。
 
 #### index.php
 
@@ -122,7 +126,7 @@ $comment = $user_data["comment"];
 ```
 
 まず、HTML部分で使いやすい様に`getUserData`で得たuser情報をそれぞれ変数に代入しておきます。
-データベースの情報は連想配列で取得しているので、`$user_data['なんとか']`で取得できますね。
+データベースの情報は連想配列で取得しているので、`$user_data[取得したい要素]`で取得できますね。
 
 ```php
 ...
@@ -153,10 +157,10 @@ $comment = $user_data["comment"];
 先ほどphp上で変数に代入したので、
 HTML部分でその変数を扱うには、
 phpのコードを埋め込む必要がありますね。  
-`<?php なんとか ?>`でphpのコードを埋め込みます。
+`<?php  ?>`でphpのコードを埋め込みます。
 今回は`print`を用いました。
 if文などを用いてもし変数が代入されてなければ、
-ダミーを表示するようになどしても良いでしょう。
+仮置きを表示するようになどしても良いでしょう。
 
 お疲れ様です。
 
