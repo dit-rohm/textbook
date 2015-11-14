@@ -234,5 +234,14 @@ if (isset($_GET['delete_post_id'])) {
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function () {
+  // リプライ時にスクリーンネームを埋めておく
+  $('.reply-btn').click(function () {
+    var $screen_name = $(this).parent().siblings('.reply-to').text();
+    $('#replyText').val($screen_name + ' ');
+  });
+});
+</script>
 </body>
 </html>
