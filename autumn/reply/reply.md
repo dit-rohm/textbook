@@ -14,8 +14,8 @@
 仕組みは以下の通りです。
 
 1. 投稿の内容に`@スクリーン名`が含まれる場合には返信だとみなす
-2. スクリーン名からその返信先ユーザのIDを取得して投稿に情報として持たせる
-3. 投稿が持っている返信先のユーザIDが自分のものだけを返信画面のタイムラインに表示させる
+1. スクリーン名からその返信先ユーザのIDを取得して投稿に情報として持たせる
+1. 投稿が持っている返信先のユーザIDが自分のものだけを返信画面のタイムラインに表示させる
 
 ### 作成手順
 1. 投稿が誰かへの返信だった時、返信先のユーザIDを取得する関数を追加
@@ -36,7 +36,7 @@
 // @スクリーン名が含まれていた場合にそのユーザIDを取得する関数
 function getReplyId(PDO $pdo, $text)
 {
-	$at = preg_match_all('/@(?P<screen_name>[a-zA-Z0-9]+) /', $text, $mention);
+	$at = preg_match('/@(?P<screen_name>[a-zA-Z0-9]+) /', $text, $mention);
 	if ($at) {
  		// スクリーン名からユーザIDをを返す
     	return getUserIdByScreenName($pdo, $mention["screen_name"][0]);
@@ -62,37 +62,6 @@ function getUserIdByScreenName(PDO $pdo, $screenName)
 
 ### コードの解説
 
-<!-- 
-```php
-$at = preg_match_all('/@(?P<screen_name>[a-zA-Z0-9]+) /', $text, $mention);
-```
-
-`@スクリーン名`が含まれているかどうかを調べるために、正規表現という表現法を使用します。正規表現とは、文字列のパターンを表現する表記法で、文字列の検索・置換を行うときに利用されます。この表現方法を利用すれば、たくさんの文章の中から容易に見つけたい文字列を検索することができます。今回は、上記のコードの`/@(?P<screen_name>[a-zA-Z0-9]+) /`の部分が正規表現の部分です。
-
-#### 正規表現の書き方について
-
-`/正規表現内容/`とすることで、正規表現の始まりと終わりを示します。
-
-[preg\_match\_all](http://php.net/manual/ja/function.preg-match-all.php)という関数は、繰り返し正規表現検索を行うための関数で、
-
-```php
-if ($at) {
-  //スクリーン名からユーザIDを取得した結果を返す
-  return getUserIdByScreenName($pdo, $mention["screen_name"][0]);
-}
-return null;
-```
-
-次に、上記のコードのif文で、もしマッチしていたらスクリーン名からユーザIDを取得する関数である`getUserIdByScreenName()`を呼び出しています。`getUserIdByScreenName()`の中を見てみると、
-
-```php
-$sql = 'SELECT id FROM users WHERE `screen_name` = :screen_name';
-```
-より、スクリーン名で条件付けられた`users`テーブルの`id`を取得していることがわかります。これで、返信先のユーザIDを取得することが出来ました。
-
-## 2. 返信先のユーザIDを保存する関数を追加
-1で、投稿が誰かへの返信だった時、返信先のユーザIDを取得する関数を作成しました。そこで、実際に投稿する時にこの関数を呼び出します。方法としては、以前作成した投稿するための関数である`writePost()`を編集し、DBの`posts`テーブルの`in_reply_to_user_id`に返信先のユーザIDを保存できるようにします。
--->
 
 ### コード
 `functions.php`の`writePost()`を変更しましょう。
@@ -119,7 +88,7 @@ function writePost(PDO $pdo, $id, $text)
 $replyUserId = getReplyId($pdo, $text);
 ```
 
-この行で、1で作った`getReplyIg()`を呼び出しています。この関数は`@スクリーン名`が含まれていた場合にそのユーザIDを取得するための関数でしたね。よって`$replyUserId`には、返信先のユーザIDが入ります。また、もし投稿が返信ではなくただの投稿だった場合は`NULL`が入ります。
+この行で、1で作った`getReplyId()`を呼び出しています。この関数は`@スクリーン名`が含まれていた場合にそのユーザIDを取得するための関数でしたね。よって`$replyUserId`には、返信先のユーザIDが入ります。また、もし投稿が返信ではなくただの投稿だった場合は`NULL`が入ります。
 
 ```php
 ...
@@ -160,9 +129,27 @@ function getReplyTimeline(PDO $pdo, $userId)
 
 ### コードの解説
 
-全ての投稿を取得していた`getTimeline()`と比較してみてください。SQL文の中に`WHERE in_reply_to_user_id = :user_id`が追加されています。
+全ての投稿を取得していた`getTimeline()`と比較してみてください。
 
-このように、`WHERE 条件式`を追加すると、条件式に一致する行を取得することができるようになります。詳しい説明は[MySQLリファレンス](./../common/mysql.md)を見て下さい。
+```php
+function getReplyTimeline(PDO $pdo, $userId)
+{
+  $sql = 'SELECT * FROM posts WHERE `in_reply_to_user_id` = :user_id ORDER BY `created_at` DESC';
+  $statement = $pdo->prepare($sql);
+  $statement->bindValue(':user_id', $userId, PDO::PARAM_INT);
+  $statement->execute();
+
+  if ($rows = $statement->fetchAll(PDO::FETCH_ASSOC)) {
+    return $rows;
+  } else {
+    return false;
+  }
+}
+```
+
+SQL文の中に`WHERE in_reply_to_user_id = :user_id`が追加されています。
+
+このように、`WHERE 条件式`を追加すると、条件式に一致する行を取得することができるようになります。詳しい説明は[MySQLリファレンス](../common/mysql.md#where)を見て下さい。
 
 ここでは、`in_reply_to_user_id`が`uesr_id`のものだけをpostsテーブルから取得するという条件をつけています。もちろんここの`user_id`は自分のユーザIDです。
 
@@ -221,7 +208,7 @@ $posts = getReplyTimeline($db, $user_id);
 <li><a href="./index.php">ホーム</a></li>
 <li class="active"><a href="./reply.php">返信</a></li>
 ```
-`class="active"`をつけることで、返信ボタンをアクティブにすることが出来ます。
+Bootstrapで`class="active"`に対してCSSが当てられているので、それを適応させることができます。返信ボタンが押されているようなデザインに変わりましたね。
 
 ***
 
@@ -230,7 +217,7 @@ $posts = getReplyTimeline($db, $user_id);
 これから先は、もっと細かい部分へと入ります。
 
 ### 今回使った構文や関数
-- [preg\_match\_all](http://php.net/manual/ja/function.preg-match-all.php)
+- [preg\_match](http://php.net/manual/ja/function.preg-match.php)
 
 ### 参考
-- [MySQLリファレンス](./../common/mysql.md)
+- [MySQLリファレンス](../common/mysql.md)
