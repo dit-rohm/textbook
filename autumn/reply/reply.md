@@ -202,7 +202,7 @@ $posts = getReplyTimeline($db, $user_id);
 $posts = getReplyTimeline($db, $user_id);
 ```
 
-`$post`には3で作成した`getReplyTimeline()`の返り値である自分宛ての返信のみが入ります。あとは、[投稿一覧表示の作成](https://github.com/dit-rohm/textbook/blob/master/autumn/timeline/timeline.md)と同じです。
+`$post`には3で作成した`getReplyTimeline()`の返り値である自分宛ての返信のみが入ります。あとは、[投稿一覧表示の作成](../timeline/timeline.md)と同じです。
 
 ```html
 <li><a href="./index.php">ホーム</a></li>
@@ -210,7 +210,7 @@ $posts = getReplyTimeline($db, $user_id);
 ```
 Bootstrapで`class="active"`に対してCSSが当てられているので、それを適応させることができます。返信ボタンが押されているようなデザインに変わりましたね。
 
-### 応用課題
+## 応用課題
 
 本稿の実装では、ページング機能は実装できていません。以前トップページのページング機能は実装しましたね。ほぼ同じなので、[ページング機能の作成](../paging/paging.md)のテキストを見ながら、ページング機能を実装してみましょう！
 
@@ -220,8 +220,8 @@ Bootstrapで`class="active"`に対してCSSが当てられているので、そ�
 
 これから先は、もっと細かい部分へと入ります。
 
-### 今回使った構文や関数
+## 今回使った構文や関数
 - [preg\_match](http://php.net/manual/ja/function.preg-match.php)
 
-### 参考
+## 参考
 - [MySQLリファレンス](../common/mysql.md)
