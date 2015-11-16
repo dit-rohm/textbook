@@ -21,8 +21,22 @@
 #### functions.php
 
 ```php
+
 ...
 ...
+function getTimeline($pdo){
+	$sql = 'SELECT * FROM posts ORDER BY `created_at` DESC';
+	$statement = $pdo->prepare($sql);
+	$statement->execute();
+
+	if ($rows = $statement->fetchAll(PDO::FETCH_ASSOC)) {
+		return $rows;
+	} else {
+		return exit;
+	}
+}
+
+//ここからなければ追記
 function getUserData(PDO $pdo, $id)
 {
 	$sql = 'SELECT * FROM users WHERE id=:id';
@@ -36,8 +50,10 @@ function getUserData(PDO $pdo, $id)
 		throw new Exception('ユーザデータを取得できません');
 	}
 }
+//ここまで
 ...
 ...
+
 ```
 
 なければ、追加しておきましょう。
@@ -70,18 +86,29 @@ $statement->execute();
 <?php
 ...
 ...
+if (isset($_GET['delete_post_id'])) {
+	$delete_post_id = $_GET['delete_post_id'];
+	$delete_post_data = getPostData($db, $delete_post_id);
+	if($user_id == $delete_post_data['user_id']){
+		deletePost($db, $delete_post_id);
+		header('Location: '.$_SERVER['SCRIPT_NAME']);
+		exit;
+	}
+}
 
+//ここから追記
 $user_data = getUserData($db, $user_id);
 $screen_name = $user_data["screen_name"];
 $user_name = $user_data["user_name"];
 $comment = $user_data["comment"];
-
+//ここまで追記
 ...
 ...
 ?>
 
 ...
 ...
+<!-- ここから編集 -->
 <!-- ユーザ情報表示領域 -->
 <div class="col-sm-4 col-sm-pull-8">
 	<div class="panel panel-default">
@@ -101,6 +128,7 @@ $comment = $user_data["comment"];
 		</div>
 	</div>
 </div>
+<!-- ここまで -->
 ...
 ...
 
