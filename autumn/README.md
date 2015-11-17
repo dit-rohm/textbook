@@ -16,4 +16,6 @@
 1. [投稿機能の作成](post/post.md)
 1. [投稿削除機能の作成](deletePost/deletePost.md)
 1. [返信機能の作成](replybutton/replybutton.md)
+1. [ページング機能の作成](paging/paging.md)
 1. [ユーザ情報の表示](getUserData/getUserData.md)
+
