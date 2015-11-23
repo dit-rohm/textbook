@@ -53,12 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (mb_strlen($user_name) < 3 || mb_strlen($user_name) > 15) {
     $error['user_name'] = '3文字以上15文字以下にしてください';
   }
-  // スクリーン名の文字数チェック
-  if (strlen($screen_name) < 3 || strlen($screen_name) > 15) {
-    $error['screen_name'] = '3文字以上15文字以下にしてください';
-  // スクリーン名は英数字になっているかチェック
-  } elseif (!preg_match('/^[a-zA-Z0-9]+$/', $screen_name)) {
-    $error['screen_name'] = '英数字にしてください';
+  // スクリーン名が英数字であることかつ文字数チェック
+  if (!preg_match('/^[a-zA-Z0-9]{3,15}$/', $screen_name)) {
+    $error['screen_name'] = '3文字以上15文字以下の英数字にしてください';
   // スクリーン名が既に登録されているかどうかチェック
   } elseif (getUserIdByScreenName($db, $screen_name)) {
     $error['screen_name'] = 'このidは既に登録されています';
@@ -73,18 +70,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   } elseif (emailExists($email, $db)) {
     $error['email'] = 'このメールアドレスは既に登録されています';
   }
-  // パスワードが英数字になっているかチェック
-  if (!preg_match('/^[a-zA-Z0-9]+$/', $password)) {
-    $error['password'] = '英数字にしてください';
-  // パスワードの文字数チェック
-  } elseif (strlen($password) < 4 || strlen($password) > 8) {
-    $error['password'] = 'パスワードは4文字以上8文字以下にしてください';
+  // パスワードが英数字であることかつ文字数チェック
+  if (!preg_match('/^[a-zA-Z0-9]{4,8}$/', $password)) {
+    $error['password'] = '4文字以上8文字以下の英数字にしてください';
   }
   // コメントの文字数チェック
   if (mb_strlen($comment) > 150) {
     $error['comment'] = '150文字以下にしてください';
   // エラーがなければデータベースに挿入する
-  } elseif (empty($error)) {
+  } 
+  if (empty($error)) {
   
     // 以下はそのまま 
     
@@ -131,7 +126,7 @@ function emailExists($email, PDO $pdo)
 
 #### ユーザ名のエラーチェック
 
-1点をチェックします。
+以下の1点をチェックします。
 
 * 文字数が3文字以上15文字以下であること
 
@@ -146,28 +141,18 @@ if (mb_strlen($user_name) < 3 || mb_strlen($user_name) > 15) {
 
 #### スクリーン名のエラーチェック
 
-3点をチェックします。
+以下の2点をチェックします。
 
-* 文字数が3文字以上15文字以下であること
+* 3文字以上15文字以下の英数字にしてください
 
 ```php
-// スクリーン名の文字数チェック
-if (strlen($screen_name) < 3 || strlen($screen_name) > 15) {
-  $error['screen_name'] = '3文字以上15文字以下にしてください';
+// スクリーン名が英数字であることかつ文字数チェック
+if (!preg_match('/^[a-zA-Z0-9]{3,15}$/', $screen_name)) {
+  $error['screen_name'] = '3文字以上15文字以下の英数字にしてください';
 }
 ```
 
-[strlen](http://php.net/manual/ja/function.strlen.php)は、文字列の長さを得るための関数です。`mb_strlen`とは違い、`strlen`はバイト数を返します。`$screen_name`は英数字のみしか入らず、1文字1バイトなのでバイト数を数えることで文字数を数えることが出来ます。`$screen_name`の長さを取得し、3文字より小さく、15文字より大きければエラーとなり、**3文字以上15文字以下にしてください**という文を`$error['screen_name']`に保存します。
-
-* 英数字であること 
-
-```php
-// スクリーン名は英数字になっているかチェック
-elseif (!preg_match('/^[a-zA-Z0-9]+$/', $screen_name)) {
-  $error['screen_name'] = '英数字にしてください';
-}
-```
-[preg_match](http://php.net/manual/ja/function.preg-match.php)を使って正規表現のマッチングを行います。ここでは、`$screen_name`が英数字でなければエラーとなり、`$error['screen_name']`に**英数字にして下さい**という文を保存します。
+[preg_match](http://php.net/manual/ja/function.preg-match.php)を使って正規表現のマッチングを行います。正規表現の`/^[a-zA-Z0-9]{3,15}$/`は、3文字以上15文字以下の英数字を示します。よって、`$screen_name`が3文字以上15文字以下の英数字ではなければエラーとなり、`$error['screen_name']`に**3文字以上15文字以下の英数字にしてください**という文を`$error['screen_name']`に保存します。
 
 * 既に登録していないこと
 
@@ -182,7 +167,7 @@ elseif (getUserIdByScreenName($db, $screen_name)) {
 
 #### メールアドレスのエラーチェック
 
-3点をチェックします。
+以下の3点をチェックします。
 
 * 入力されていること 
 
@@ -233,33 +218,22 @@ function emailExists($email, PDO $pdo)
 
 #### パスワードのエラーチェック
 
-2点をチェックします。
+以下の1点をチェックします。
 
-* 英数字であること
+* 4文字以上8文字以下の英数字であること
 
 ```php
-// パスワードが英数字になっているかチェック
-if (!preg_match('/^[a-zA-Z0-9]+$/', $password)) {
-  $error['password'] = '英数字にしてください';
+// パスワードが英数字であることかつ文字数チェック
+if (!preg_match('/^[a-zA-Z0-9]{4,8}$/', $password)) {
+  $error['password'] = '4文字以上8文字以下の英数字にしてください';
 }
 ```
 
-スクリーン名のエラーチェックで出てきたのと同じです。
-
-* 文字数が4文字以上8文字以下であること
-
-```php
-// パスワードの文字数チェック
-elseif (strlen($password) < 4 || strlen($password) > 8) {
-  $error['password'] = 'パスワードは4文字以上8文字以下にしてください';
-}
-```
-
-これもスクリーン名のエラーチェックで出てきたのと同じです。
+スクリーン名のエラーチェックで出てきたものと同じです。
 
 #### コメントのエラーチェック
 
-1点をチェックします。
+以下の1点をチェックします。
 
 * 文字数が150文字以下であること
 
@@ -272,11 +246,11 @@ if (mb_strlen($comment) > 150) {
 
 ユーザ名のエラーチェックで出てきたのと同じです。
 
-#### エラーがないときDBに保存
+#### エラーがなければDBに保存
 
 ```php
 // エラーがなければデータベースに挿入する
-elseif (empty($error)) {
+if (empty($error)) {
   ...
 }
 ```
@@ -348,7 +322,6 @@ elseif (empty($error)) {
 ## 参考 
 
 * [mb_strlen](http://php.net/manual/ja/function.mb-strlen.php)
-* [strlen](http://php.net/manual/ja/function.strlen.php)
 * [filter_var](http://php.net/manual/ja/function.filter-var.php)
 * [preg_match](http://php.net/manual/ja/function.preg-match.php)
 * [array_key_exists](http://php.net/manual/ja/function.array-key-exists.php)
