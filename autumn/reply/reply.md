@@ -62,6 +62,32 @@ function getUserIdByScreenName(PDO $pdo, $screenName)
 
 ### コードの解説
 
+```php
+$at = preg_match('/@(?P<screen_name>[a-zA-Z0-9]+) /', $text, $mention);
+```
+
+`@スクリーン名`が含まれているかどうかを調べるために、正規表現という表現法を使用します。正規表現とは、文字列のパターンを表現する表記法で、文字列の検索・置換を行うときに利用されます。この表現方法を利用すれば、たくさんの文章の中から容易に見つけたい文字列を検索することができます。今回は、上記のコードの`/@(?P<screen_name>[a-zA-Z0-9]+) /`の部分が正規表現の部分です。
+
+[preg\_match](http://php.net/manual/ja/function.preg-match.php)という関数は、正規表現検索を行うための関数です。
+
+```php
+if ($at) {
+  //スクリーン名からユーザIDを取得した結果を返す
+  return getUserIdByScreenName($pdo, $mention["screen_name"][0]);
+}
+return null;
+```
+
+次に、上記のコードのif文で、もしマッチしていたらスクリーン名からユーザIDを取得する関数である`getUserIdByScreenName()`を呼び出しています。`getUserIdByScreenName()`の中を見てみると、
+
+```php
+$sql = 'SELECT id FROM users WHERE `screen_name` = :screen_name';
+```
+
+より、スクリーン名で条件付けられた`users`テーブルの`id`を取得していることがわかります。これで、返信先のユーザIDを取得することが出来ました。
+
+## 2. 返信先のユーザIDを保存する関数を追加
+1で、投稿が誰かへの返信だった時、返信先のユーザIDを取得する関数を作成しました。そこで、実際に投稿する時にこの関数を呼び出します。方法としては、以前作成した投稿するための関数である`writePost()`を編集し、DBの`posts`テーブルの`in_reply_to_user_id`に返信先のユーザIDを保存できるようにします。
 
 ### コード
 `functions.php`の`writePost()`を変更しましょう。
