@@ -68,6 +68,12 @@ $at = preg_match('/@(?P<screen_name>[a-zA-Z0-9]+) /', $text, $mention);
 
 `@スクリーン名`が含まれているかどうかを調べるために、正規表現という表現法を使用します。正規表現とは、文字列のパターンを表現する表記法で、文字列の検索・置換を行うときに利用されます。この表現方法を利用すれば、たくさんの文章の中から容易に見つけたい文字列を検索することができます。今回は、上記のコードの`/@(?P<screen_name>[a-zA-Z0-9]+) /`の部分が正規表現の部分です。
 
+正規表現については、以下のリンクを参照して下さい。
+
+* [サルにもわかる正規表現入門](http://www.mnet.ne.jp/~nakama/)
+* [正規表現 - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+* [正規表現 (Ruby 1.9.3)](http://docs.ruby-lang.org/ja/1.9.3/doc/spec=2fregexp.html)
+
 [preg\_match](http://php.net/manual/ja/function.preg-match.php)という関数は、正規表現検索を行うための関数です。
 
 ```php
@@ -110,7 +116,7 @@ function writePost(PDO $pdo, $id, $text)
 
 ### コードの解説
 
-```
+```php
 $replyUserId = getReplyId($pdo, $text);
 ```
 
@@ -251,3 +257,6 @@ Bootstrapで`class="active"`に対してCSSが当てられているので、そ�
 
 ## 参考
 - [MySQLリファレンス](../common/mysql.md)
+- [サルにもわかる正規表現入門](http://www.mnet.ne.jp/~nakama/)
+- [正規表現 - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [正規表現 (Ruby 1.9.3)](http://docs.ruby-lang.org/ja/1.9.3/doc/spec=2fregexp.html)
