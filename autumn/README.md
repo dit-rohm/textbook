@@ -18,4 +18,7 @@
 1. [返信機能の作成](replybutton/replybutton.md)
 1. [ページング機能の作成](paging/paging.md)
 1. [返信画面の作成](reply/reply.md)
+
+## Ditterの作成（発展）
 1. [ユーザ情報の表示](getUserData/getUserData.md)
+1. [新規登録のエラーチェック](errorCheck/errorCheck.md)
