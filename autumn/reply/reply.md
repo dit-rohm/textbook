@@ -39,7 +39,7 @@ function getReplyId(PDO $pdo, $text)
 	$at = preg_match('/@(?P<screen_name>[a-zA-Z0-9]+) /', $text, $mention);
 	if ($at) {
  		// スクリーン名からユーザIDをを返す
-    	return getUserIdByScreenName($pdo, $mention["screen_name"][0]);
+    	return getUserIdByScreenName($pdo, $mention["screen_name"]);
     }
     // 返信でなければNULLを返す
     return null;
@@ -79,7 +79,7 @@ $at = preg_match('/@(?P<screen_name>[a-zA-Z0-9]+) /', $text, $mention);
 ```php
 if ($at) {
   //スクリーン名からユーザIDを取得した結果を返す
-  return getUserIdByScreenName($pdo, $mention["screen_name"][0]);
+  return getUserIdByScreenName($pdo, $mention["screen_name"]);
 }
 return null;
 ```
