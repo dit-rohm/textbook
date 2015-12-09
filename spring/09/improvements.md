@@ -56,3 +56,4 @@ window.setInterval(function() {
   ...処理内容
 }, 8000);
 ```
+<a href="/dit-rohm/textbook/blob/master/spring/10/sublime.md">Sublime Textのカスタマイズ</a>

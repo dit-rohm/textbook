@@ -146,3 +146,4 @@ HTMLタグやCSSのプロパティの意味が分からなければ，リファ�
 背景には自分の写真を使用してください．
 良い写真が無い場合は周りのメンバーと撮り合ったりしてみましょう！
 撮った写真はSlackでメッセージに添付すれば，スマートフォンとPC間で手軽に共有できます．
+<a href="/dit-rohm/textbook/blob/master/spring/02/how_to_design_responsively.md">レスポンシブデザインの作り方</a>

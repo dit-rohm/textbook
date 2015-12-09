@@ -57,3 +57,4 @@ alert(fruits);       // ['apple', 'orange']
 alert(fruits.pop()); // orange
 ```
 
+<a href="/dit-rohm/textbook/blob/master/spring/08/touch_the_numbers.md">タッチザナンバーズを作ろう</a>

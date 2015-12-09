@@ -429,3 +429,4 @@ window.onload = function () {
 };
 ```
 
+<a href="/dit-rohm/textbook/blob/master/spring/08/js4.md">JavaScript入門4</a>

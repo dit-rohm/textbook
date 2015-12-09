@@ -108,3 +108,4 @@ var qa = [
 
 if文の中には、正解数を表示する`alert`を書いて完成です。
 
+<a href="/dit-rohm/textbook/blob/master/spring/06/marubatsu2.md">まるばつクイズを作ろう(解答)</a>

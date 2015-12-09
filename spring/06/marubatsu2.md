@@ -106,3 +106,4 @@ function hantei(btnNo) {
 }
 ```
 
+<a href="/dit-rohm/textbook/blob/master/spring/07/js3.md">JavaScript入門3</a>

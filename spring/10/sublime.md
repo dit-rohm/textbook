@@ -111,3 +111,4 @@ ColorPicerは色の設定を視覚的に行いやすくすることができる�
 ## まとめ
 上記以外にも便利なパッケージはたくさんあります。
 自分でも調べてみてSublimeTextをもっと便利なものにしていきましょう！
+<a href="/dit-rohm/textbook/blob/master/spring/10/bootstrap.md">Bootstrap入門</a>
