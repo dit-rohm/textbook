@@ -10,6 +10,7 @@
 ## 実装手順
 
 主な流れとしては、
+
 1. トークンのチェック（PHP）
 2. エラーチェック（PHP, MySQL）
 
@@ -41,8 +42,7 @@ GETメソッド、POSTメソッドを利用したHTTPリクエストは、別の
 
 ```php
 <?php
-require_once('config.php');
-require_once('functions.php');
+require_once('init.php');
 
 session_start();
 
@@ -167,8 +167,8 @@ function setToken() {
 <?
 function checkToken() {
   if (empty($_SESSION['token']) || ($_SESSION['token'] != $_POST['token'])) {
-    echo "不正なPOSTが行われました！";
-    exit;
+    print "不正なPOSTが行われました！";
+    header('HTTP', true, 400);
   }
 }
 ```
@@ -272,31 +272,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 ...
 ```
 
-- functions.php
-
-これまでに書いた関数の下に書き足してください。
-
-```php
-...
-...
-function getUserId($email, $password, $db) {
-  $sql = "SELECT id, password FROM users WHERE email = :email";
-  $statement = $db->prepare($sql);
-  $statement->bindValue(':email', $email, PDO::PARAM_STR);
-  $statement->execute();
-  $row = $statement->fetch();
-  if (password_verify($password, $row['password'])) {
-    return $row['id'];
-  } else {
-    return false;
-  }
-}
-
-function escape($s) {
-  return htmlspecialchars($s, ENT_QUOTES, "UTF-8");
-}
-```
-
 ### コードの解説
 
 まずコードの流れを追っていきます。
@@ -334,11 +309,11 @@ $suuji = '1';
 
 ```php
 if ($kazu == $suuji) {
-  echo "上記のif文の式は true です";
+  print "上記のif文の式は true です";
 }
 
 if ($kazu === $suuji) {
-  echo "上記のif文の式は false で、この文は表示されません"
+  print "上記のif文の式は false で、この文は表示されません"
 }
 ```
 
