@@ -139,3 +139,4 @@ for (var i = 0; i < array.length; i++) {
 では実際にこれらをプログラム中に使ってみましょう。
 次の[まるばつクイズ](./marubatsu.md)に進んでください。
 
+<a href="/dit-rohm/textbook/blob/master/spring/06/marubatsu.md">まるばつクイズを作ろう</a>

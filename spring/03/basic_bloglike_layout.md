@@ -120,4 +120,4 @@ HTMLのファイルに```<link>```タグでstyle.cssを追加してください�
 各種色の指定は．色の名前で指定するほか「カラーコード」で指定することもできます．
 下記のサイトは指定した色に対するカラーコードを出してくれるものです．ご活用ください．
 
-[colourcode](http://colourco.de/ "colourcode")
+[colourcode](http://colourco.de/ "colourcode")<a href="/dit-rohm/textbook/blob/master/spring/04/html-css.md">HTML, CSSの総まとめ</a>

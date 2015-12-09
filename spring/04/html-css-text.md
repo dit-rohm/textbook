@@ -248,3 +248,4 @@ h2, h3, p {
 }
 ```
 
+<a href="/dit-rohm/textbook/blob/master/spring/05/js.md">JavaScript 入門</a>

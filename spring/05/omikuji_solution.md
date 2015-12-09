@@ -50,3 +50,4 @@ window.onload = function() {
   });
 };
 ```
+<a href="/dit-rohm/textbook/blob/master/spring/06/js2.md">JavaScript入門２</a>
