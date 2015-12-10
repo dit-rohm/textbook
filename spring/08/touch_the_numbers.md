@@ -117,3 +117,5 @@ numbersArray.sort(function() {
 
   [次へ タッチザナンバーズを作ろう(解答)](./08/touch_the_numbers_answer.md)
   [次へ タッチザナンバーズを作ろう(解答)](../08/touch_the_numbers_answer.md)
+ 
+  [次へ タッチザナンバーズを作ろう(解答)](../08/touch_the_numbers_answer.md)

@@ -93,3 +93,5 @@ HTMLのにmeta要素として記述します．
 * [レスポンシブWebデザインの作り方（簡単設定方法）](http://webdesignerwork.jp/web/responsivewebdesign/)
   [次へ ブログ風のレイアウト](./03/basic_bloglike_layout.md)
   [次へ ブログ風のレイアウト](../03/basic_bloglike_layout.md)
+ 
+  [次へ ブログ風のレイアウト](../03/basic_bloglike_layout.md)

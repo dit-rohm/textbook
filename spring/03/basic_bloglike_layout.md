@@ -122,3 +122,5 @@ HTMLのファイルに```<link>```タグでstyle.cssを追加してください�
 
 [colourcode](http://colourco.de/ "colourcode")  [次へ HTML, CSSの総まとめ](./04/html-css.md)
   [次へ HTML, CSSの総まとめ](../04/html-css.md)
+ 
+  [次へ HTML, CSSの総まとめ](../04/html-css.md)

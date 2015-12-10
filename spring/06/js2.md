@@ -141,3 +141,5 @@ for (var i = 0; i < array.length; i++) {
 
   [次へ まるばつクイズを作ろう](./06/marubatsu.md)
   [次へ まるばつクイズを作ろう](../06/marubatsu.md)
+ 
+  [次へ まるばつクイズを作ろう](../06/marubatsu.md)

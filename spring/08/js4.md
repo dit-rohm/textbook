@@ -59,3 +59,5 @@ alert(fruits.pop()); // orange
 
   [次へ タッチザナンバーズを作ろう](./08/touch_the_numbers.md)
   [次へ タッチザナンバーズを作ろう](../08/touch_the_numbers.md)
+ 
+  [次へ タッチザナンバーズを作ろう](../08/touch_the_numbers.md)

@@ -52,3 +52,5 @@ window.onload = function() {
 ```
   [次へ JavaScript入門２](./06/js2.md)
   [次へ JavaScript入門２](../06/js2.md)
+ 
+  [次へ JavaScript入門２](../06/js2.md)

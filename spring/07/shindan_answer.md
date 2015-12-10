@@ -431,3 +431,5 @@ window.onload = function () {
 
   [次へ JavaScript入門4](./08/js4.md)
   [次へ JavaScript入門4](../08/js4.md)
+ 
+  [次へ JavaScript入門4](../08/js4.md)

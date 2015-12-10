@@ -148,3 +148,5 @@ HTMLタグやCSSのプロパティの意味が分からなければ，リファ�
 撮った写真はSlackでメッセージに添付すれば，スマートフォンとPC間で手軽に共有できます．
   [次へ レスポンシブデザインの作り方](./02/how_to_design_responsively.md)
   [次へ レスポンシブデザインの作り方](../02/how_to_design_responsively.md)
+ 
+  [次へ レスポンシブデザインの作り方](../02/how_to_design_responsively.md)

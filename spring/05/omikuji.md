@@ -178,3 +178,5 @@ randInt(1, 6); // 1
 ```
   [次へ おみくじを作ってみよう（解説）](./05/omikuji_solution.md)
   [次へ おみくじを作ってみよう（解説）](../05/omikuji_solution.md)
+ 
+  [次へ おみくじを作ってみよう（解説）](../05/omikuji_solution.md)

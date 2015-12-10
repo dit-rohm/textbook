@@ -135,3 +135,5 @@ h1:hover {
 [次へ](profile.md)
   [次へ プロフィールを作ろう](./01/profile.md)
   [次へ プロフィールを作ろう](../01/profile.md)
+ 
+  [次へ プロフィールを作ろう](../01/profile.md)
