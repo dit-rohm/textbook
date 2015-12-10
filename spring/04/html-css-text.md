@@ -249,3 +249,4 @@ h2, h3, p {
 ```
 
   [次へ JavaScript 入門](./05/js.md)
+  [次へ JavaScript 入門](../05/js.md)

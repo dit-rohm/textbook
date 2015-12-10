@@ -57,3 +57,4 @@ window.setInterval(function() {
 }, 8000);
 ```
   [次へ Sublime Textのカスタマイズ](./10/sublime.md)
+  [次へ Sublime Textのカスタマイズ](../10/sublime.md)

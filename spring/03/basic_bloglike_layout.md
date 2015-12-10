@@ -121,3 +121,4 @@ HTMLのファイルに```<link>```タグでstyle.cssを追加してください�
 下記のサイトは指定した色に対するカラーコードを出してくれるものです．ご活用ください．
 
 [colourcode](http://colourco.de/ "colourcode")  [次へ HTML, CSSの総まとめ](./04/html-css.md)
+  [次へ HTML, CSSの総まとめ](../04/html-css.md)

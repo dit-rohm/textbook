@@ -107,3 +107,4 @@ function hantei(btnNo) {
 ```
 
   [次へ JavaScript入門3](./07/js3.md)
+  [次へ JavaScript入門3](../07/js3.md)

@@ -308,3 +308,4 @@ function showResult(result) {
 
 `result()`から受け取った変数`result`をそのまま利用してジャンプさせる方法もあります。考えてみてください。
   [次へ 診断ゲームを作ろう(解答例)](./07/shindan_answer.md)
+  [次へ 診断ゲームを作ろう(解答例)](../07/shindan_answer.md)

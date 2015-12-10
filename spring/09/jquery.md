@@ -156,3 +156,4 @@ jQueryの機能は多く、ここで紹介しきることはできません。�
 [jQuery API Documentation(公式、英語)](http://api.jquery.com "jQuery API Documentation")  
 [jQuery 日本語レファレンス(非公式、日本語)](http://semooh.jp/jquery/ "jQuery 日本語レファレンス")
   [次へ DITのようなサイトに動きを](./09/improvements.md)
+  [次へ DITのようなサイトに動きを](../09/improvements.md)

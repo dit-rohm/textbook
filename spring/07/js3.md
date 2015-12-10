@@ -161,3 +161,4 @@ for (var i in test) {
 > #### コラム2. JSON (JavaScript Object Notation)
 > JavaScriptにおけるオブジェクトの記述法をベースとしたデータ記述言語にJSONというものがあります。"JavaScript"と名前に入っていますが様々な言語で利用可能で、言語を超えたデータの受け渡しに利用されます。データ記述言語には他にもXMLやYAMLといったものがあります。
   [次へ 診断ゲームを作ろう](./07/shindan_exercise.md)
+  [次へ 診断ゲームを作ろう](../07/shindan_exercise.md)
