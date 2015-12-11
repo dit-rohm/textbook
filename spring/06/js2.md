@@ -139,3 +139,31 @@ for (var i = 0; i < array.length; i++) {
 では実際にこれらをプログラム中に使ってみましょう。
 次の[まるばつクイズ](./marubatsu.md)に進んでください。
 
+  [次へ まるばつクイズを作ろう](./06/marubatsu.md)
+  [次へ まるばつクイズを作ろう](../06/marubatsu.md)
+ 
+  [次へ まるばつクイズを作ろう](../06/marubatsu.md)
+ 
+[前へ JavaScript入門２](./js2.md)
+ 
+[次へ まるばつクイズを作ろう](./marubatsu.md)
+ 
+[前へ JavaScript入門２](./js2.md)
+ 
+[次へ まるばつクイズを作ろう](./marubatsu.md)
+ 
+[前へ JavaScript入門２](./js2.md)
+ 
+[次へ まるばつクイズを作ろう](./marubatsu.md)
+ 
+[前へ JavaScript入門２](./js2.md)
+ 
+[次へ まるばつクイズを作ろう](./marubatsu.md)
+ 
+[前へ JavaScript入門２](./js2.md)
+ 
+[次へ まるばつクイズを作ろう](./marubatsu.md)
+ 
+[前へ JavaScript入門２](./js2.md)
+ 
+[次へ まるばつクイズを作ろう](./marubatsu.md)

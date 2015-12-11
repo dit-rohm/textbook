@@ -429,3 +429,31 @@ window.onload = function () {
 };
 ```
 
+  [次へ JavaScript入門4](./08/js4.md)
+  [次へ JavaScript入門4](../08/js4.md)
+ 
+  [次へ JavaScript入門4](../08/js4.md)
+ 
+[前へ 診断ゲームを作ろう(解答例)](./shindan_answer.md)
+ 
+[次へ JavaScript入門4](./js4.md)
+ 
+[前へ 診断ゲームを作ろう(解答例)](./shindan_answer.md)
+ 
+[次へ JavaScript入門4](./js4.md)
+ 
+[前へ 診断ゲームを作ろう(解答例)](./shindan_answer.md)
+ 
+[次へ JavaScript入門4](./js4.md)
+ 
+[前へ 診断ゲームを作ろう(解答例)](./shindan_answer.md)
+ 
+[次へ JavaScript入門4](./js4.md)
+ 
+[前へ 診断ゲームを作ろう(解答例)](./shindan_answer.md)
+ 
+[次へ JavaScript入門4](./js4.md)
+ 
+[前へ 診断ゲームを作ろう(解答例)](./shindan_answer.md)
+ 
+[次へ JavaScript入門4](./js4.md)

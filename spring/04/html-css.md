@@ -48,3 +48,31 @@ HTMLの構造は以下の図のようになっています。
 ### 解答
 
 今回の課題の解答は、<a href="./html-css-text.md" target="_blank">ここ</a>にあります！困った時や、自分の書いたコードの答え合わせなどに使用してください。
+  [次へ HTML, CSSの総まとめ（解答）](./04/html-css-text.md)
+  [次へ HTML, CSSの総まとめ（解答）](../04/html-css-text.md)
+ 
+  [次へ HTML, CSSの総まとめ（解答）](../04/html-css-text.md)
+ 
+[前へ HTML, CSSの総まとめ](./html-css.md)
+ 
+[次へ HTML, CSSの総まとめ（解答）](./html-css-text.md)
+ 
+[前へ HTML, CSSの総まとめ](./html-css.md)
+ 
+[次へ HTML, CSSの総まとめ（解答）](./html-css-text.md)
+ 
+[前へ HTML, CSSの総まとめ](./html-css.md)
+ 
+[次へ HTML, CSSの総まとめ（解答）](./html-css-text.md)
+ 
+[前へ HTML, CSSの総まとめ](./html-css.md)
+ 
+[次へ HTML, CSSの総まとめ（解答）](./html-css-text.md)
+ 
+[前へ HTML, CSSの総まとめ](./html-css.md)
+ 
+[次へ HTML, CSSの総まとめ（解答）](./html-css-text.md)
+ 
+[前へ HTML, CSSの総まとめ](./html-css.md)
+ 
+[次へ HTML, CSSの総まとめ（解答）](./html-css-text.md)

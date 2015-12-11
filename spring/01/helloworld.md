@@ -133,3 +133,29 @@ h1:hover {
 ![quiz.png](images/helloworld/quiz.png)
 
 [次へ](profile.md)
+  [次へ プロフィールを作ろう](./01/profile.md)
+  [次へ プロフィールを作ろう](../01/profile.md)
+ 
+  [次へ プロフィールを作ろう](../01/profile.md)
+ 
+[前へ HTMLを書いてみよう](./helloworld.md)
+ 
+[次へ プロフィールを作ろう](./profile.md)
+ 
+[前へ HTMLを書いてみよう](./helloworld.md)
+ 
+[次へ プロフィールを作ろう](./profile.md)
+ 
+[前へ HTMLを書いてみよう](./helloworld.md)
+ 
+[次へ プロフィールを作ろう](./profile.md)
+ 
+[前へ HTMLを書いてみよう](./helloworld.md)
+ 
+[次へ プロフィールを作ろう](./profile.md)
+ 
+[前へ HTMLを書いてみよう](./helloworld.md)
+ 
+[次へ プロフィールを作ろう](./profile.md)
+ 
+[次へ プロフィールを作ろう](./profile.md)
