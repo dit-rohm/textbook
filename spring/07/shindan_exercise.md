@@ -311,3 +311,27 @@ function showResult(result) {
   [次へ 診断ゲームを作ろう(解答例)](../07/shindan_answer.md)
  
   [次へ 診断ゲームを作ろう(解答例)](../07/shindan_answer.md)
+ 
+[前へ 診断ゲームを作ろう](./shindan_exercise.md)
+ 
+[次へ 診断ゲームを作ろう(解答例)](./shindan_answer.md)
+ 
+[前へ 診断ゲームを作ろう](./shindan_exercise.md)
+ 
+[次へ 診断ゲームを作ろう(解答例)](./shindan_answer.md)
+ 
+[前へ 診断ゲームを作ろう](./shindan_exercise.md)
+ 
+[次へ 診断ゲームを作ろう(解答例)](./shindan_answer.md)
+ 
+[前へ 診断ゲームを作ろう](./shindan_exercise.md)
+ 
+[次へ 診断ゲームを作ろう(解答例)](./shindan_answer.md)
+ 
+[前へ 診断ゲームを作ろう](./shindan_exercise.md)
+ 
+[次へ 診断ゲームを作ろう(解答例)](./shindan_answer.md)
+ 
+[前へ 診断ゲームを作ろう](./shindan_exercise.md)
+ 
+[次へ 診断ゲームを作ろう(解答例)](./shindan_answer.md)

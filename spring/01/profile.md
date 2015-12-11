@@ -150,3 +150,25 @@ HTMLタグやCSSのプロパティの意味が分からなければ，リファ�
   [次へ レスポンシブデザインの作り方](../02/how_to_design_responsively.md)
  
   [次へ レスポンシブデザインの作り方](../02/how_to_design_responsively.md)
+ 
+[前へ プロフィールを作ろう](./profile.md)
+ 
+[次へ レスポンシブデザインの作り方](./how_to_design_responsively.md)
+ 
+[前へ プロフィールを作ろう](./profile.md)
+ 
+[次へ レスポンシブデザインの作り方](./how_to_design_responsively.md)
+ 
+[前へ プロフィールを作ろう](./profile.md)
+ 
+[次へ レスポンシブデザインの作り方](./how_to_design_responsively.md)
+ 
+[前へ プロフィールを作ろう](./profile.md)
+ 
+[次へ レスポンシブデザインの作り方](./how_to_design_responsively.md)
+ 
+[前へ プロフィールを作ろう](./profile.md)
+ 
+[次へ レスポンシブデザインの作り方](./how_to_design_responsively.md)
+ 
+[次へ レスポンシブデザインの作り方](./how_to_design_responsively.md)

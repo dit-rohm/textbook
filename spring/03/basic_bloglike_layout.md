@@ -124,3 +124,27 @@ HTMLのファイルに```<link>```タグでstyle.cssを追加してください�
   [次へ HTML, CSSの総まとめ](../04/html-css.md)
  
   [次へ HTML, CSSの総まとめ](../04/html-css.md)
+ 
+[前へ ブログ風のレイアウト](./basic_bloglike_layout.md)
+ 
+[次へ HTML, CSSの総まとめ](./html-css.md)
+ 
+[前へ ブログ風のレイアウト](./basic_bloglike_layout.md)
+ 
+[次へ HTML, CSSの総まとめ](./html-css.md)
+ 
+[前へ ブログ風のレイアウト](./basic_bloglike_layout.md)
+ 
+[次へ HTML, CSSの総まとめ](./html-css.md)
+ 
+[前へ ブログ風のレイアウト](./basic_bloglike_layout.md)
+ 
+[次へ HTML, CSSの総まとめ](./html-css.md)
+ 
+[前へ ブログ風のレイアウト](./basic_bloglike_layout.md)
+ 
+[次へ HTML, CSSの総まとめ](./html-css.md)
+ 
+[前へ ブログ風のレイアウト](./basic_bloglike_layout.md)
+ 
+[次へ HTML, CSSの総まとめ](./html-css.md)

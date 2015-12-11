@@ -110,3 +110,27 @@ function hantei(btnNo) {
   [次へ JavaScript入門3](../07/js3.md)
  
   [次へ JavaScript入門3](../07/js3.md)
+ 
+[前へ まるばつクイズを作ろう(解答)](./marubatsu2.md)
+ 
+[次へ JavaScript入門3](./js3.md)
+ 
+[前へ まるばつクイズを作ろう(解答)](./marubatsu2.md)
+ 
+[次へ JavaScript入門3](./js3.md)
+ 
+[前へ まるばつクイズを作ろう(解答)](./marubatsu2.md)
+ 
+[次へ JavaScript入門3](./js3.md)
+ 
+[前へ まるばつクイズを作ろう(解答)](./marubatsu2.md)
+ 
+[次へ JavaScript入門3](./js3.md)
+ 
+[前へ まるばつクイズを作ろう(解答)](./marubatsu2.md)
+ 
+[次へ JavaScript入門3](./js3.md)
+ 
+[前へ まるばつクイズを作ろう(解答)](./marubatsu2.md)
+ 
+[次へ JavaScript入門3](./js3.md)

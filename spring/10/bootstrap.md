@@ -227,3 +227,9 @@ Bootstrapのグリッドシステムを使うことでフォームのレイア�
 ## まとめ
 Bootstrapを使うことで簡単に見た目をカスタマイズできることが分かりましたか？
 今後はBootstrapを用いてかっこいいサイトを作ることに挑戦してみてください！
+ 
+[前へ Bootstrap入門](./bootstrap.md)
+ 
+
+ 
+[前へ Bootstrap入門](./bootstrap.md)

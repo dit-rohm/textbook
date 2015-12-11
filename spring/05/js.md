@@ -245,3 +245,27 @@ A. 110
   [次へ おみくじを作ってみよう](../05/omikuji.md)
  
   [次へ おみくじを作ってみよう](../05/omikuji.md)
+ 
+[前へ JavaScript 入門](./js.md)
+ 
+[次へ おみくじを作ってみよう](./omikuji.md)
+ 
+[前へ JavaScript 入門](./js.md)
+ 
+[次へ おみくじを作ってみよう](./omikuji.md)
+ 
+[前へ JavaScript 入門](./js.md)
+ 
+[次へ おみくじを作ってみよう](./omikuji.md)
+ 
+[前へ JavaScript 入門](./js.md)
+ 
+[次へ おみくじを作ってみよう](./omikuji.md)
+ 
+[前へ JavaScript 入門](./js.md)
+ 
+[次へ おみくじを作ってみよう](./omikuji.md)
+ 
+[前へ JavaScript 入門](./js.md)
+ 
+[次へ おみくじを作ってみよう](./omikuji.md)

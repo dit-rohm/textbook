@@ -60,3 +60,27 @@ window.setInterval(function() {
   [次へ Sublime Textのカスタマイズ](../10/sublime.md)
  
   [次へ Sublime Textのカスタマイズ](../10/sublime.md)
+ 
+[前へ DITのようなサイトに動きを](./improvements.md)
+ 
+[次へ Sublime Textのカスタマイズ](./sublime.md)
+ 
+[前へ DITのようなサイトに動きを](./improvements.md)
+ 
+[次へ Sublime Textのカスタマイズ](./sublime.md)
+ 
+[前へ DITのようなサイトに動きを](./improvements.md)
+ 
+[次へ Sublime Textのカスタマイズ](./sublime.md)
+ 
+[前へ DITのようなサイトに動きを](./improvements.md)
+ 
+[次へ Sublime Textのカスタマイズ](./sublime.md)
+ 
+[前へ DITのようなサイトに動きを](./improvements.md)
+ 
+[次へ Sublime Textのカスタマイズ](./sublime.md)
+ 
+[前へ DITのようなサイトに動きを](./improvements.md)
+ 
+[次へ Sublime Textのカスタマイズ](./sublime.md)

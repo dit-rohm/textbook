@@ -180,3 +180,27 @@ randInt(1, 6); // 1
   [次へ おみくじを作ってみよう（解説）](../05/omikuji_solution.md)
  
   [次へ おみくじを作ってみよう（解説）](../05/omikuji_solution.md)
+ 
+[前へ おみくじを作ってみよう](./omikuji.md)
+ 
+[次へ おみくじを作ってみよう（解説）](./omikuji_solution.md)
+ 
+[前へ おみくじを作ってみよう](./omikuji.md)
+ 
+[次へ おみくじを作ってみよう（解説）](./omikuji_solution.md)
+ 
+[前へ おみくじを作ってみよう](./omikuji.md)
+ 
+[次へ おみくじを作ってみよう（解説）](./omikuji_solution.md)
+ 
+[前へ おみくじを作ってみよう](./omikuji.md)
+ 
+[次へ おみくじを作ってみよう（解説）](./omikuji_solution.md)
+ 
+[前へ おみくじを作ってみよう](./omikuji.md)
+ 
+[次へ おみくじを作ってみよう（解説）](./omikuji_solution.md)
+ 
+[前へ おみくじを作ってみよう](./omikuji.md)
+ 
+[次へ おみくじを作ってみよう（解説）](./omikuji_solution.md)

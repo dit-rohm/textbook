@@ -95,3 +95,27 @@ HTMLのにmeta要素として記述します．
   [次へ ブログ風のレイアウト](../03/basic_bloglike_layout.md)
  
   [次へ ブログ風のレイアウト](../03/basic_bloglike_layout.md)
+ 
+[前へ レスポンシブデザインの作り方](./how_to_design_responsively.md)
+ 
+[次へ ブログ風のレイアウト](./basic_bloglike_layout.md)
+ 
+[前へ レスポンシブデザインの作り方](./how_to_design_responsively.md)
+ 
+[次へ ブログ風のレイアウト](./basic_bloglike_layout.md)
+ 
+[前へ レスポンシブデザインの作り方](./how_to_design_responsively.md)
+ 
+[次へ ブログ風のレイアウト](./basic_bloglike_layout.md)
+ 
+[前へ レスポンシブデザインの作り方](./how_to_design_responsively.md)
+ 
+[次へ ブログ風のレイアウト](./basic_bloglike_layout.md)
+ 
+[前へ レスポンシブデザインの作り方](./how_to_design_responsively.md)
+ 
+[次へ ブログ風のレイアウト](./basic_bloglike_layout.md)
+ 
+[前へ レスポンシブデザインの作り方](./how_to_design_responsively.md)
+ 
+[次へ ブログ風のレイアウト](./basic_bloglike_layout.md)

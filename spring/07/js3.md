@@ -164,3 +164,27 @@ for (var i in test) {
   [次へ 診断ゲームを作ろう](../07/shindan_exercise.md)
  
   [次へ 診断ゲームを作ろう](../07/shindan_exercise.md)
+ 
+[前へ JavaScript入門3](./js3.md)
+ 
+[次へ 診断ゲームを作ろう](./shindan_exercise.md)
+ 
+[前へ JavaScript入門3](./js3.md)
+ 
+[次へ 診断ゲームを作ろう](./shindan_exercise.md)
+ 
+[前へ JavaScript入門3](./js3.md)
+ 
+[次へ 診断ゲームを作ろう](./shindan_exercise.md)
+ 
+[前へ JavaScript入門3](./js3.md)
+ 
+[次へ 診断ゲームを作ろう](./shindan_exercise.md)
+ 
+[前へ JavaScript入門3](./js3.md)
+ 
+[次へ 診断ゲームを作ろう](./shindan_exercise.md)
+ 
+[前へ JavaScript入門3](./js3.md)
+ 
+[次へ 診断ゲームを作ろう](./shindan_exercise.md)
