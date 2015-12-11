@@ -57,3 +57,7 @@ alert(fruits);       // ['apple', 'orange']
 alert(fruits.pop()); // orange
 ```
 
+ 
+[前へ JavaScript入門4](../08/js4.md)
+ 
+[次へ タッチザナンバーズを作ろう](../08/touch_the_numbers.md)

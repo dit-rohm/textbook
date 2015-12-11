@@ -56,3 +56,7 @@ window.setInterval(function() {
   ...処理内容
 }, 8000);
 ```
+ 
+[前へ DITのようなサイトに動きを](../09/improvements.md)
+ 
+[次へ Sublime Textのカスタマイズ](../10/sublime.md)

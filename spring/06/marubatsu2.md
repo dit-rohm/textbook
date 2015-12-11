@@ -106,3 +106,7 @@ function hantei(btnNo) {
 }
 ```
 
+ 
+[前へ まるばつクイズを作ろう(解答)](../06/marubatsu2.md)
+ 
+[次へ JavaScript入門3](../07/js3.md)

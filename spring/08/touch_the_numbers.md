@@ -115,3 +115,7 @@ numbersArray.sort(function() {
 
 `setInterval()`を使うことでタイマーを作ることができます。詳しくは自分で調べてみてください。タイマーを止める際は`clearInterval()`を使用します。
 
+ 
+[前へ タッチザナンバーズを作ろう](../08/touch_the_numbers.md)
+ 
+[次へ タッチザナンバーズを作ろう(解答)](../08/touch_the_numbers_answer.md)
