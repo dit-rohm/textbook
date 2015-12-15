@@ -22,3 +22,4 @@
 ## Ditterの作成（発展）
 1. [ユーザ情報の表示](getUserData/getUserData.md)
 1. [新規登録のエラーチェック](errorCheck/errorCheck.md)
+1. [セキュリティの強化](improveSignin/improveSignin.md)
