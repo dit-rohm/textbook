@@ -48,10 +48,11 @@ session_start();
 
 // 以下追記
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-  setToken();
-} else {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   checkToken();
+  // ここは既に書いています
+} else {
+  setToken();
 }
 
 ?>
@@ -219,11 +220,9 @@ $password = '';
 
 /*
 このHTTPリクエストの判定はすでに記述済みです
-else の中、checkToken();の下を書き足していってください。
+checkToken()以下を書き直してください
 */
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-  setToken();
-} else {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   checkToken();
   $email = $_POST['email'];
   $password = $_POST['password'];
@@ -234,11 +233,16 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   }
   if ($password === '') {
     $error['password'] = 'パスワードを入力してください';
-  } else if (!$user_id = getUserId($email, $password, $db)) {
-    $error['password'] = 'パスワードとメールアドレスが正しくありません';
-  } else if (empty($error)) {
-
   }
+  if (!$user_id = getUserId($email, $password, $db)) {
+    $error['password'] = 'パスワードとメールアドレスが正しくありません';
+  }
+  if (empty($error)) {
+    session_regenerate_id(true);
+    $_SESSION['user_id'] = $user_id;
+  }
+} else {
+  setToken();
 }
 ...
 ...
