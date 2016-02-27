@@ -50,3 +50,7 @@ window.onload = function() {
   });
 };
 ```
+ 
+[前へ おみくじを作ってみよう（解説）](../05/omikuji_solution.md)
+ 
+[次へ JavaScript入門２](../06/js2.md)
