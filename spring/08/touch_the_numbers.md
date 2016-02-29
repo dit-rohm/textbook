@@ -1,29 +1,27 @@
 # Touch the Numbersを作ろう
 
-## 概要
+### 完成図
 
 Touch the Numbersとは、1から25の数字をすべて押し終えるまでのタイムを競うゲームです。
 
 ![Touch the Numbers](images/ttn.gif)
 
-## テンプレート
+#### テンプレート
 
 [テンプレートファイル](./touch_the_numbers.zip)をダウンロードしてから始めてください。
 
-## 基本課題
-
-基本課題では、Touch the Numbersの基本的な機能を実装します。
-
-### 方針
+### 作成手順
 
 1. スタートボタンを作る
 1. 数字の入った配列を作る
 1. スタートボタンが押されたら数字ボタンを配置
 1. 数字ボタンが押された判定
 
-### 1. スタートボタンを作る
+## 1. スタートボタンを作る
 
 まず、スタートボタンを作りましょう。
+
+### index.html
 
 ```html
 <input id="start" type="button" onclick="startGame()" value="ゲームスタート">
@@ -33,6 +31,8 @@ Touch the Numbersとは、1から25の数字をすべて押し終えるまでの
 
 1から25の数字を手作業でランダムに配列に代入しておきます。
 順番はお好きなように。
+
+### script.js
 
 ```javascript
 var numbersArray = [
@@ -44,6 +44,8 @@ var numbersArray = [
 ### 3. スタートボタンが押された時、数字ボタンを配置
 
 スタートボタンに`onclick="startGame()"`としているので、`startGame`関数を作って、その中でボタンの配置を行います。for文で25回まわしボタンを作成した後、`numbers`に追加しています。
+
+### script.js
 
 ```javascript
 function startGame() {
@@ -61,6 +63,8 @@ function startGame() {
 
 ### 4. 数字ボタンが押された時、`hantei`関数を呼ぶように
 
+#### script.js
+
 ```javascript
 button.onclick = hantei;
 ```
@@ -69,11 +73,15 @@ button.onclick = hantei;
 
 まず、次に押すべき数字が何番かを保存しておく変数を定義します。
 
+#### script.js
+
 ```javascript
 var nextNumber = 1;
 ```
 
 この`nextNumber`と押されたボタンの数字が同じであれば、ボタンを消して`nextNumber`を+1すればいいですね。
+
+#### script.js
 
 ```javascript
 function hantei() {
@@ -90,6 +98,8 @@ function hantei() {
 
 nextNumberが26になった時点で終了ですね
 
+#### script.js
+
 ```javascript
 if (nextNumber == 26) {
   alert('clear');
@@ -104,6 +114,8 @@ if (nextNumber == 26) {
 ### 1. ランダムに並べる
 
 以下のようにすることで、`numbersArray`配列の値をランダムにシャッフルできます。どこに書くかは自分で考えてください。
+
+#### script.js
 
 ```javascript
 numbersArray.sort(function() {
