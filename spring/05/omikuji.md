@@ -1,19 +1,19 @@
 # おみくじ
-HTMLとJavaScriptを使って「おみくじ」を作れ．
-余裕があればテンプレートを書き換えて機能を付け加えたり，デザインを変更したりすること．
+HTMLとJavaScriptを使って「おみくじ」を作りましょう。
+余裕があればテンプレートを書き換えて機能を付け加えたり、デザインを変更してみましょう。
 
 テンプレートのダウンロードは[こちら](template.zip "template.zip")．
 
-## 要求仕様
+### 完成図
 
 ![おみくじ](img/sample.gif)
 
 1. ページを開くと，みくじ筒の画像(img/omikuji.png)が表示される
 1. みくじ筒の画像(img/omikuji.png)をクリックするとみくじの画像(img/omikuji_X.png)に切り替わる
 
-なお，御籤の画像のXには1から6までのランダムな数字が入る．
+なお，みくじの画像のXには1から6までのランダムな数字が入ります。
 
-### プログラムの流れ
+### 要求仕様
 1. loadイベントが発生した時…
   1. みくじの画像を表示させる`<img>`要素を取得
   1. `<img>`要素がクリックされた時…
@@ -21,18 +21,19 @@ HTMLとJavaScriptを使って「おみくじ」を作れ．
     1. みくじの画像へのパスを生成する
     1. `<img>`要素のsrc属性を書き換える
 
-## 必要な知識
- * HTML
-  * `<img>`
- * JavaScript
-  * 文字列の結合
-  * window.onload
-  * document.getElementById(id)
-  * element.setAttribute(name, value)
-  * element.addEventListener(type, listener)
-  * Math.floor(number)
-  * Math.random()
+## 使用する構文や関数
+ 1. HTML
+  1. `<img>`
+ 1. JavaScript
+  1. 文字列の結合
+  1. window.onload
+  1. document.getElementById(id)
+  1. element.setAttribute(name, value)  
+     element.addEventListener(type, listener)
+  1. Math.floor(number)  
+     Math.random()
 
+####index.html
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +47,7 @@ HTMLとJavaScriptを使って「おみくじ」を作れ．
 </html>
 ```
 
+####omikuji.js
 ```javascript
 window.onload = function() {
   document.getElementById('hoge').addEventListener('click', function() {
@@ -56,8 +58,8 @@ window.onload = function() {
 };
 ```
 
-### 文字列の結合
-文字列の結合には`+`演算子を用いる．文字列と数値を結合する場合，数値が文字列に変換された後に結合される．複数の数値と文字列を結合する場合，もしくは複数の数値を文字列として結合する場合には注意が必要である．
+## 1.文字列の結合
+文字列の結合には`+`演算子を用います。文字列と数値を結合する場合、数値が文字列に変換された後に結合されます。複数の数値と文字列を結合する場合、もしくは複数の数値を文字列として結合する場合には注意が必要です。
 ```javascript
 var textA = '吾輩は';
 var textB = '猫である';
@@ -88,10 +90,10 @@ numberA + String(numberB)               // O 12343.14 number + string
 String(numberA) + String(numberB)       // O 12343.14 string + string
 ```
 
-### オブジェクト: window
-#### プロパティ: onload
-onloadにはloadイベントに対応するイベントハンドラーを記述する．
-loadイベントはDOMツリーの構築・外部リソースの読み込み（画像, CSS, スクリプト）が終了した時点で発生する．
+## 2.オブジェクト: window
+### プロパティ: onload
+onloadにはloadイベントに対応するイベントハンドラーを記述します。
+loadイベントはDOMツリーの構築・外部リソースの読み込み（画像, CSS, スクリプト）が終了した時点で発生します。
 
 ```javascript
 // Method 1
@@ -108,9 +110,9 @@ window.onload = hoge;
 
 ```
 
-### オブジェクト: document
-#### メソッド: getElementById(id)
-該当するIDを持つ要素を返す．
+## 3.オブジェクト: document
+### メソッド: getElementById(id)
+該当するIDを持つ要素を返します。
 
 ```javascript
 element = document.getElementById('hoge');
@@ -122,10 +124,9 @@ if (element != null) {
 }
 ```
 
-### オブジェクト: element
-
-#### メソッド: setAttribute(name, value)
-指定の要素に属性を追加する．属性名が重複している場合は属性値を変更する．
+## 4.オブジェクト: element
+### (1)メソッド: setAttribute(name, value)
+指定の要素に属性を追加します。属性名が重複している場合は属性値を変更します。
 
 ```javascript
 element.setAttribute('src','luna.png');
@@ -135,8 +136,8 @@ element.setAttribute('alt','luna');
 // <img id="hoge" src="luna.png" alt="luna">
 ```
 
-#### メソッド: addEventListener(type, listener)
-指定の要素にイベントリスナーを追加する．
+### (2)メソッド: addEventListener(type, listener)
+指定の要素にイベントリスナーを追加します。
 
 ```javascript
 // elementがクリックされた時に処理を実行する
@@ -148,17 +149,17 @@ element.addEventListener('click', function () {
 });
 ```
 
-### オブジェクト: Math
-#### メソッド: floor(number)
-指定された数値の小数点以下を切り捨てた値を返す．
+## 5.オブジェクト: Math
+### (1)メソッド: floor(number)
+指定された数値の小数点以下を切り捨てた値を返します。
 
 ```javascript
 Math.floor(35.1); // 35
 Math.floor(35.9); // 35
 ```
 
-#### メソッド: random()
-0以上1未満の範囲で疑似乱数を返す．
+### (2)メソッド: random()
+0以上1未満の範囲で疑似乱数を返します。
 
 ```javascript
 Math.random(); // 0.13960939436219633
@@ -176,7 +177,7 @@ randInt(1, 6); // 6
 randInt(1, 6); // 3
 randInt(1, 6); // 1
 ```
- 
+
 [前へ おみくじを作ってみよう](../05/omikuji.md)
- 
+
 [次へ おみくじを作ってみよう（解説）](../05/omikuji_solution.md)
