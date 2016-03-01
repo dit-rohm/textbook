@@ -1,10 +1,13 @@
-# 本日の文法事項
+# JavaScript入門3
 
-[こちらのテンプレート](https://github.com/Tamrin007/textbook/blob/shindan-game/7/js_template.zip?raw=true)を利用して以下の文法事項を確認してください。
+[こちらのテンプレート](https://github.com/Tamrin007/textbook/blob/shindan-game/7/js_template.zip?raw=true)
+を利用して以下の文法事項を確認してください。
+
+- フォーム作成
+- オブジェクト
 
 ## フォーム作成
-
-### 回答の選択肢
+### 選択肢の作成
 
 今回の診断ゲームでは「ラジオボタン」を使用します。ラジオボタンとは「複数の選択肢から一つだけを選ぶボタン」のことです。ラジオボタンは以下のタグで設定できます。  
 
