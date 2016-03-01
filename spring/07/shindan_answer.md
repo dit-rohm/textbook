@@ -2,9 +2,9 @@
 
 ## HTML
 
-### index.html
+### トップページ
 
-```html
+```html:index.html
 <!DOCTYPE html>
 <html>
 <head>
@@ -95,9 +95,9 @@
 </html>
 ```
 
-### king.html (診断結果：王様タイプ)
+### 診断結果：王様タイプ
 
-```html
+```html:king.html
 <!DOCTYPE html>
 <html>
 <head>
@@ -127,9 +127,9 @@
 </html>
 ```
 
-### officer.html (診断結果：軍人タイプ)
+### 診断結果：軍人タイプ
 
-```html
+```html:officer.html
 <!DOCTYPE html>
 <html>
 <head>
@@ -159,9 +159,9 @@
 </html>
 ```
 
-### scholar.html (診断結果：学者タイプ)
+### 診断結果：学者タイプ
 
-```html
+```html:scholar.html
 <!DOCTYPE html>
 <html>
 <head>
@@ -191,9 +191,9 @@
 </html>
 ```
 
-### craftsman.html (診断結果：職人タイプ)
+### 診断結果：職人タイプ
 
-```html
+```html:craftsman.html
 <!DOCTYPE html>
 <html>
 <head>
@@ -225,9 +225,7 @@
 
 ## CSS
 
-### style.css
-
-```css
+```css:style.css
 body {
   margin: 0;
 }
@@ -278,9 +276,7 @@ ul {
 
 ## JavaScript
 
-### script.js
-
-```js
+```js:script.js
 var type = {
   king: 0, officer: 0, scholar: 0, craftsman: 0
 };
@@ -380,7 +376,7 @@ function showResult(result) {
 
 ## 短縮版
 
-```html
+```html:index.html
 ...
 <div class="submit">
   <input type="button" value="診断する" id="shindanbtn">
@@ -429,7 +425,6 @@ window.onload = function () {
 };
 ```
 
- 
 [前へ 診断ゲームを作ろう(解答例)](../07/shindan_answer.md)
  
 [次へ JavaScript入門4](../08/js4.md)
