@@ -1,8 +1,11 @@
 # 本日の文法事項
 
-## 基本課題で使う関数
+### 基本課題で使う関数
+1. document.createElement()
+1. element.appendChild()
+1. array.pop()
 
-### document.createElement()
+## 1. document.createElement()
 
 JavaScript中で要素（タグ）を作成します。
 
@@ -25,7 +28,7 @@ button.onclick = hoge;
 *※注意: `onclick`へは関数の名前を代入します。`()`はつけません*
 
 
-### element.appendChild()
+## 2. element.appendChild()
 
 `createElement`で作成した要素を親要素に追加（append）します。
 
@@ -45,7 +48,7 @@ document.getElementById('hoge').appendChild(div);
 </div>
 ```
 
-### array.pop()
+## 3. array.pop()
 
 配列の末尾から要素を取り除きます。
 
@@ -57,7 +60,7 @@ alert(fruits);       // ['apple', 'orange']
 alert(fruits.pop()); // orange
 ```
 
- 
+
 [前へ JavaScript入門4](../08/js4.md)
- 
+
 [次へ タッチザナンバーズを作ろう](../08/touch_the_numbers.md)

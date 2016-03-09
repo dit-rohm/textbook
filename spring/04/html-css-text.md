@@ -1,4 +1,4 @@
-# HTMLとCSSでDITのようなWebサイトを作ってみよう（解答）
+# 解答：HTMLとCSSでDITのようなWebサイトを作ってみよう
 
 [HTMLとCSSでDITのようなWebサイトを作ってみよう](./html-css.md)の解答です。
 
@@ -248,7 +248,7 @@ h2, h3, p {
 }
 ```
 
- 
+
 [前へ HTML, CSSの総まとめ（解答）](../04/html-css-text.md)
- 
+
 [次へ JavaScript 入門](../05/js.md)
