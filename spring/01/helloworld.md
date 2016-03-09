@@ -1,14 +1,26 @@
-## HTMLを書いてみよう
+#  HTMLを書いてみよう
 
-[同志社大学のWebページ](http://www.doshisha.ac.jp/index.html)を表示してみましょう．
-ブラウザで右クリックをして [ページのソースを表示] を押してください．
-ここで表示されるテキストがHTML（Hypertext Markup Language）と呼ばれるWeb表示に用いられるものです．
+[同志社大学のWebページ](http://www.doshisha.ac.jp/index.html)を表示してみましょう。
+ブラウザで右クリックをして [ページのソースを表示] を押してください。
+ここで表示されるテキストがHTML（Hypertext Markup Language）と呼ばれるWeb表示に用いられるものです。
 
-Sublime Text2を開いてCommand+Nを押してください（Windowsの場合はControl+Nです）．
-新しいファイルが開いたらCommand+Sを押してファイル名をindex.htmlと書いてデスクトップに保存してください．
-次に以下のHTMLを写してください．
+### 手順
 
-### index.html
+1. HTMLを書く 
+1. 書いたHTMLをブラウザで見る
+1. HTMLをCSSで装飾する
+1. 書いたHTMLとCSSをブラウザで見る
+1. 発展課題
+1. 理解度チェック問題
+
+## 1. HTMLを書く
+
+Sublime Text2を開いてCommand+Nを押してください（Windowsの場合はControl+Nです）。
+新しいファイルが開いたらCommand+Sを押してファイル名をindex.htmlと書いてデスクトップに保存してください。
+
+次に以下のHTMLを写してください。
+
+#### index.html
 
 ```html
 <!DOCTYPE html>
@@ -25,17 +37,20 @@ Sublime Text2を開いてCommand+Nを押してください（Windowsの場合は
 </html>
 ```
 
-## 書いたHTMLをブラウザで見てみましょう
+## 2. 書いたHTMLをブラウザで見る
 
-保存したindex.htmlを開くと書いたHTMLをブラウザで確認できます．
+書いたHTMLをブラウザで見てみましょう。
+保存したindex.htmlを開くと書いたHTMLをブラウザで確認できます。
 
-###index.html
+#### index.html
 
 ```html
 <title>ここがタイトルです</title>
 ```
 
-titleで指定したものがページのタイトルになります．
+titleで指定したものがページのタイトルになります。
+
+#### index.html
 
 ```html
 <body>
@@ -43,17 +58,19 @@ titleで指定したものがページのタイトルになります．
 </body>
 ```
 
-bodyで指定したものがページの中身になります．
+bodyで指定したものがページの中身になります。
 
-## HTMLをCSSで装飾してみましょう
+## 3. HTMLをCSSで装飾する
 
-さきほどの殺風景なHTMLに装飾を加えるのがCSS（Cascading Style Sheets）です．CSSで文字の色や背景を変えてみましょう．
+さきほどの殺風景なHTMLに装飾を加えるのがCSS（Cascading Style Sheets）です。
+CSSで文字の色や背景を変えてみましょう。
 
-Sublime Text2を開いてCommand+Nを押してください（Windowsの場合はControl+Nです）．
-ファイルを開いたらstyle.cssと書いてデスクトップに保存しましょう．
-次に以下のCSSを書き写してみましょう．
+Sublime Text2を開いてCommand+Nを押してください（Windowsの場合はControl+Nです）。
+ファイルを開いたらstyle.cssと書いてデスクトップに保存しましょう。
 
-### style.css
+次に以下のCSSを書き写してみましょう。
+
+#### style.css
 
 ```css
 h1 {
@@ -70,9 +87,9 @@ h3 {
 }
 ```
 
-さきほど作成したindex.htmlに以下の1行を追記してstyle.cssを読み込めるようにしましょう．
+さきほど作成したindex.htmlに以下の1行を追記してstyle.cssを読み込めるようにしましょう。
 
-###index.html
+#### index.html
 
 ```html
 ---（中略）---
@@ -82,16 +99,17 @@ h3 {
 ---（中略）---
 ```
 
-## 書いたHTMLとCSSをブラウザで見てみましょう
+## 4. 書いたHTMLとCSSをブラウザで見る
 
 ただしく装飾されて表示されましたか？
 
 ![screenshot.png](images/helloworld/screenshot.png)
 
-## 発展課題
-HTMLのbodyに以下のコードを書き写してブラウザで確認してみましょう．
+## 5. 発展課題
 
-### index.html
+HTMLのbodyに以下のコードを書き写してブラウザで確認してみましょう。
+
+#### index.html
 
 ```html
 ---（中略）---
@@ -102,9 +120,9 @@ HTMLのbodyに以下のコードを書き写してブラウザで確認してみ
 ---（中略）---
 ```
 
-CSSに以下のコードを書き写してブラウザで確認してみましょう．
+CSSに以下のコードを書き写してブラウザで確認してみましょう。
 
-### style.css
+#### style.css
 
 ```css
 ---（中略）---
@@ -124,14 +142,13 @@ h1:hover {
 ---（中略）---
 ```
 
-一行ずつ書き写しながらブラウザで動作を確認しましょう．
-調べるときは「html タグ」や「css プロパティ」で検索してください．
+一行ずつ書き写しながらブラウザで動作を確認しましょう。
+調べるときは「html タグ」や「css プロパティ」で検索してください。
 
-## 理解度チェック問題
-以下の画像のページを作成してください．
+## 6. 理解度チェック問題
+
+以下の画像のページを作成してください。
 
 ![quiz.png](images/helloworld/quiz.png)
 
-[次へ](profile.md)
- 
 [次へ プロフィールを作ろう](../01/profile.md)
